@@ -1,0 +1,37 @@
+<h2>
+  Etapa 1: Definição de domínios lógicos
+</h2>
+<p>Quais serão os domínios lógicos da aplicação?</p>
+<details>
+  <summary>Explicação</summary>
+  <p>Aqui serão definidas as funcionalidades macro da aplicação.</p>
+  <p>Cada domínio lógico será carregado sob demanda ao acionar a rota.</p>
+  <p>Ex.: Em um sistema ERP</p>
+  <ul>
+    <li>Cliente (agrupando CRUD e listagem de clientes)</li>
+    <li>Estoque (agrupando CRUD e listagem de estoque)</li>
+    <li>Venda (Gerenciamento das vendas)</li>
+    <li>Emissão de notas</li>
+  </ul>
+</details>
+
+<form #dominioForm="ngForm">
+  <fieldset>
+    <legend>Domínio lógico</legend>
+    <label for="nomeDominio">Domínio:</label>
+    <input type="text" id="nomeDominio" [(ngModel)]="model.nome" name="nomeDominio">
+    <label for="descricaoDominio">Descrição:</label>
+    <input type="text" id="descricaoDominio" [(ngModel)]="model.descricao" name="descricaoDominio">
+    <button (click)="adicionar()">+</button><br>
+  </fieldset>
+  <fieldset>
+    <legend>Domínios lógicos</legend>
+    <ul>
+      <li *ngFor="let dominio of estruturaAplicacaoService.dominiosLogicos">{{dominio.nome}} ({{dominio.descricao}})
+        <button (click)="remover(dominio)">-</button>
+        <button (click)="moverParaCima(dominio)">^</button>
+        <button (click)="moverParaBaixo(dominio)">v</button>
+      </li>
+    </ul>
+  </fieldset>
+</form>
