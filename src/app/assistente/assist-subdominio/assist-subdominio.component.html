@@ -1,0 +1,65 @@
+<h2>
+  Etapa 2: Definição de funcionalidades dos domínios lógicos
+</h2>
+<p>Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</p>
+<details>
+  <summary>Explicação</summary>
+  <p>Aqui serão definidas as funcionalidades para cada domínio.</p>
+  <p>Ex.: Em um sistema ERP</p>
+  <ul>
+    <li>Cliente
+      <ul>
+        <li>Listar clientes</li>
+        <li>Criar novo cliente</li>
+        <li>Alterar dados de um cliente</li>
+      </ul>
+    </li>
+    <li>Estoque
+      <ul>
+        <li>Listar estoque</li>
+        <li>Registrar compra</li>
+      </ul>
+    </li>
+    <li>Venda
+      <ul>
+        <li>Registrar venda</li>
+        <li>Registrar venda</li>
+      </ul>
+    </li>
+    <li>Emissão de notas
+      <ul>
+        <li>Emitir nota</li>
+        <li>Consultar notas emitidas</li>
+      </ul>
+    </li>
+  </ul>
+</details>
+
+<fieldset>
+  <legend>Funcionalidades dos domínios lógicos definidos</legend>
+  <ul>
+    <li *ngFor="let itemDominio of estruturaAplicacaoService.dominiosLogicos" (click)="dominio = itemDominio">
+      <span *ngIf="itemDominio===dominio">>></span>{{itemDominio.nome}} ({{itemDominio.descricao}})
+      <ul>
+          <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" 
+          [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade">
+            {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
+          </my-lista>
+        </ul>
+    </li>
+  </ul>
+</fieldset>
+
+<form #funcionalidadeForm="ngForm">
+  <fieldset>
+    <legend>Funcionalidade do domínio {{ dominio.nome }}</legend>
+    <label for="nomeFuncionalidade">Funcionalidade:</label>
+    <input type="text" id="nomeFuncionalidade" [(ngModel)]="model.nome" name="nomeFuncionalidade">
+    <label for="descricaoFuncionalidade">Descrição:</label>
+    <input type="text" id="descricaoFuncionalidade" [(ngModel)]="model.descricao" name="descricaoFuncionalidade">
+    <button (click)="adicionar()">+</button><br>
+  </fieldset>
+</form>
+
+<button (click)="passoAnterior()">&lt; Passo anterior</button>
+<button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()">Próximo passo ></button>

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { EstruturaAplicacaoService } from './shared/estrutura-aplicacao.service';
+//import { ListaComponent } from './shared/lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    PaginaInicialComponent
+    PaginaInicialComponent,
+    //ListaComponent
   ],
   imports: [
     BrowserModule,

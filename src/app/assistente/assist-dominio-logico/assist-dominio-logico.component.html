@@ -4,8 +4,8 @@
 <p>Quais serão os domínios lógicos da aplicação?</p>
 <details>
   <summary>Explicação</summary>
-  <p>Aqui serão definidas as funcionalidades macro da aplicação.</p>
-  <p>Cada domínio lógico será carregado sob demanda ao acionar a rota.</p>
+  <p>Aqui serão definidas as funcionalidades gerais da aplicação.</p>
+  <p>Cada domínio lógico será carregado sob demanda ao acionar uma rota.</p>
   <p>Ex.: Em um sistema ERP</p>
   <ul>
     <li>Cliente (agrupando CRUD e listagem de clientes)</li>
@@ -24,14 +24,14 @@
     <input type="text" id="descricaoDominio" [(ngModel)]="model.descricao" name="descricaoDominio">
     <button (click)="adicionar()">+</button><br>
   </fieldset>
-  <fieldset>
-    <legend>Domínios lógicos</legend>
+</form>
+<fieldset>
+    <legend>Domínios lógicos definidos</legend>
     <ul>
-      <li *ngFor="let dominio of estruturaAplicacaoService.dominiosLogicos">{{dominio.nome}} ({{dominio.descricao}})
-        <button (click)="remover(dominio)">-</button>
-        <button (click)="moverParaCima(dominio)">^</button>
-        <button (click)="moverParaBaixo(dominio)">v</button>
-      </li>
+      <my-lista *ngFor="let item of estruturaAplicacaoService.dominiosLogicos" 
+      [lista]="estruturaAplicacaoService.dominiosLogicos" [item]="item">
+        {{item.nome}} ({{item.descricao}})
+      </my-lista>
     </ul>
   </fieldset>
-</form>
+<button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()">Próximo passo ></button>
