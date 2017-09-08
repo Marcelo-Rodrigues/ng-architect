@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
+import { DominioLogico } from './dominio-logico';
 
 @Injectable()
 export class EstruturaAplicacaoService {
 
-  private _dominiosLogicos = [];
+  public dominiosLogicos = [];
   constructor() { }
 
-  adicionarDominioLogico(dominioLogico: string) {
+  adicionarDominioLogico(dominioLogico: DominioLogico) {
     this.dominiosLogicos.push(dominioLogico);
   }
 
-  get dominiosLogicos() {
-    return this._dominiosLogicos;
+  possuiDominioLogico() {
+    return this.dominiosLogicos.length;
   }
 }

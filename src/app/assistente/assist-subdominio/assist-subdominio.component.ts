@@ -15,7 +15,7 @@ export class AssistSubdominioComponent implements OnInit {
   model: Funcionalidade;
 
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
-    if (!this.estruturaAplicacaoService.dominiosLogicos.length) {
+    if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
       this.passoAnterior();
     }
 
@@ -37,7 +37,12 @@ export class AssistSubdominioComponent implements OnInit {
 
   passoAnterior() {
     // TODO: salvar dominios logicos
-    this.router.navigate(['assistente', 'etapa1']);
+    this.router.navigate(['assistente', 'etapa1-dominio_logico']);
+  }
+
+  proximoPasso() {
+    // TODO: salvar dominios logicos
+    this.router.navigate(['assistente', 'etapa3-rota']);
   }
 
 }

@@ -20,7 +20,7 @@ export class AssistDominioLogicoComponent implements OnInit {
   }
 
   adicionar() {
-    this.estruturaAplicacaoService.dominiosLogicos.push(this.model);
+    this.estruturaAplicacaoService.adicionarDominioLogico(this.model);
     this.novoDominio();
   }
 
@@ -30,6 +30,6 @@ export class AssistDominioLogicoComponent implements OnInit {
 
   proximoPasso() {
     // TODO: salvar dominios logicos
-    this.router.navigate(['assistente', 'etapa2']);
+    this.router.navigate(['assistente', 'etapa2-subdominio']);
   }
 }

@@ -2,16 +2,14 @@ import { Funcionalidade } from './funcionalidade';
 
 export class DominioLogico {
 
-    private _funcionalidades: Funcionalidade[];
+    public funcionalidades: Funcionalidade[];
+    public rota: string;
 
     constructor(
         public nome: string,
         public descricao?: string
     ) {
-        this._funcionalidades = [];
-     }
-
-     get funcionalidades() {
-         return this._funcionalidades;
+        this.funcionalidades = [];
+        this.rota = '';
      }
 }
