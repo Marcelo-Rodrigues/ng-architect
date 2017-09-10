@@ -4,7 +4,7 @@ import { DominioLogico } from './dominio-logico';
 @Injectable()
 export class EstruturaAplicacaoService {
 
-  public dominiosLogicos = [];
+  public dominiosLogicos: DominioLogico[] = [];
   constructor() { }
 
   adicionarDominioLogico(dominioLogico: DominioLogico) {

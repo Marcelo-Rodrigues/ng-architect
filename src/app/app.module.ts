@@ -6,18 +6,18 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { EstruturaAplicacaoService } from './shared/estrutura-aplicacao.service';
-//import { ListaComponent } from './shared/lista/lista.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    PaginaInicialComponent,
-    //ListaComponent
+    PaginaInicialComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule.forRoot()
   ],
   providers: [EstruturaAplicacaoService],
   bootstrap: [AppComponent]

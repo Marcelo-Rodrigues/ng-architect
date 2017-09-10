@@ -38,14 +38,14 @@
   <legend>Funcionalidades dos domínios lógicos definidos</legend>
   <ul>
     <li *ngFor="let itemDominio of estruturaAplicacaoService.dominiosLogicos">
-      {{itemDominio.nome}} ({{itemDominio.descricao}}) 
+      {{itemDominio.nome}} ({{itemDominio.descricao}})
       <label for="rotaDominio">Rota do domínio:</label>
       <input type="text" id="rotaDominio" [(ngModel)]="itemDominio.rota" name="rotaDominio">
       <ul>
         <li *ngFor="let itemFuncionalidade of itemDominio.funcionalidades">
           {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
-          <label for="rotaFuncionalidade">Rota da funcionalidade:</label>
-          [{{itemDominio.rota}}/<input type="text" id="rotaFuncionalidade" [(value)]="itemFuncionalidade.rota" name="rotaFuncionalidade">]
+          <label for="rotaFuncionalidade">Rota da funcionalidade:</label> [{{itemDominio.rota}}/
+          <input type="text" id="rotaFuncionalidade" [(value)]="itemFuncionalidade.rota" name="rotaFuncionalidade">]
         </li>
       </ul>
     </li>
@@ -55,3 +55,7 @@
 <button (click)="passoAnterior()">&lt; Passo anterior</button>
 <button (click)="proximoPasso()">Gerar JSON</button>
 <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Donload JSON</a>
+
+<code>
+  <p *ngFor="let comando of comandos">{{comando}}</p>
+</code>

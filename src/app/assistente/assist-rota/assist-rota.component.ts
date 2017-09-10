@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { EstruturaAplicacaoService } from '../../shared/estrutura-aplicacao.service';
+import { GeracaoScriptService } from '../../shared/geracao-script.service';
 import { DominioLogico } from '../../shared/dominio-logico';
 import { Funcionalidade } from '../../shared/funcionalidade';
 
@@ -12,8 +13,10 @@ import { Funcionalidade } from '../../shared/funcionalidade';
 })
 export class AssistRotaComponent implements OnInit {
   jsonUrl: any;
+  comandos: string[] = [];
 
-  constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router, private sanitizer: DomSanitizer) {
+  constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router,
+     private sanitizer: DomSanitizer, private geracaoScriptService: GeracaoScriptService) {
     if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
       this.passoAnterior();
     }
@@ -30,6 +33,7 @@ export class AssistRotaComponent implements OnInit {
   proximoPasso() {
     // TODO: salvar dominios logicos
     // this.router.navigate(['assistente', '']);
+    this.comandos = this.geracaoScriptService.gerarScript();
     this.generateDownloadJsonUri();
   }
 
