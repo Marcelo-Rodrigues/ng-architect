@@ -33,13 +33,38 @@
     </li>
   </ul>
 </details>
+<div class="panel-group" id="accordion">
+    <div *ngFor="let itemDominio of estruturaAplicacaoService.dominiosLogicos" class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" (click)="dominio=itemDominio">
+          {{itemDominio.nome}} ({{itemDominio.descricao}})
+          <span [ngClass]="{'badge badge-pill':true, 
+          'badge-primary': itemDominio.funcionalidades.length>0,
+              'badge-danger':itemDominio.funcionalidades.length===0}">{{itemDominio.funcionalidades.length+' funcionalidade(s)'}}</span>
+        </a>
+        </h4>
+      </div>
+      <div [ngClass]="{'panel-collapse collapse':true, 'in':dominio===itemDominio}">
+        <div class="panel-body">
+            <ul class="list-group">
+                <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" 
+                [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade">
+                  {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
+                </my-lista>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<fieldset>
+<!-- <fieldset>
   <legend>Funcionalidades dos domínios lógicos definidos</legend>
-  <ul>
-    <li *ngFor="let itemDominio of estruturaAplicacaoService.dominiosLogicos" (click)="dominio = itemDominio">
+  <ul class="list-group">
+    <li [ngClass]="{'list-group-item':true,'border border-primary':itemDominio===dominio}" *ngFor="let itemDominio of estruturaAplicacaoService.dominiosLogicos" 
+    (click)="dominio = itemDominio">
       <span *ngIf="itemDominio===dominio">>></span>{{itemDominio.nome}} ({{itemDominio.descricao}})
-      <ul>
+      <ul class="list-group">
           <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" 
           [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade">
             {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
@@ -47,16 +72,20 @@
         </ul>
     </li>
   </ul>
-</fieldset>
+</fieldset> -->
 
 <form #funcionalidadeForm="ngForm">
   <fieldset>
     <legend>Funcionalidade do domínio {{ dominio.nome }}</legend>
-    <label for="nomeFuncionalidade">Funcionalidade:</label>
-    <input type="text" id="nomeFuncionalidade" [(ngModel)]="model.nome" name="nomeFuncionalidade">
-    <label for="descricaoFuncionalidade">Descrição:</label>
-    <input type="text" id="descricaoFuncionalidade" [(ngModel)]="model.descricao" name="descricaoFuncionalidade">
-    <button (click)="adicionar()">+</button><br>
+    <div class="input-group">      
+      <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon">Funcionalidade</label>
+      <input class="form-control" placeholder="Ex.: CadastrarCliente" type="text" id="nomeFuncionalidade" [(ngModel)]="model.nome" name="nomeFuncionalidade">
+    </div>
+    <div class="input-group">
+      <label for="descricaoFuncionalidade" class="input-group-addon" id="descfunc-addon">Descrição</label>
+      <input class="form-control" placeholder="Ex.: Cadastrar clientes" type="text" id="descricaoFuncionalidade" [(ngModel)]="model.descricao" name="descricaoFuncionalidade">
+    </div>
+    <button (click)="adicionar()" class="btn btn-sucess">Adicionar</button><br>
   </fieldset>
 </form>
 

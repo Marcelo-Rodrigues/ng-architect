@@ -1,6 +1,6 @@
-<li>
+<li class="list-group-item" [@moveState]="state">
   <ng-content></ng-content>
-  <button (click)="remover(item)">-</button>
-  <button (click)="moverParaCima(item)">^</button>
-  <button (click)="moverParaBaixo(item)">v</button>
+  <button (click)="moverParaCima(item)" class="btn btn-primary btn-sm"><div class="moveup"></div></button>
+  <button (click)="moverParaBaixo(item)" class="btn btn-primary btn-sm"><div class="movedown"></div></button>
+  <button (click)="remover(item)" class="btn btn-danger btn-sm delete">x</button>
 </li>

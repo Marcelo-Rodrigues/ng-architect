@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+
+.badge,.panel-default>.panel-heading .badge.badge-default {
+    background-color: #636c72;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-default[href]:focus, .badge-default[href]:hover {
+    background-color: #4b5257;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-primary {
+    background-color: #0275d8;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-primary[href]:focus, .badge-primary[href]:hover {
+    background-color: #025aa5;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-success {
+    background-color: #5cb85c;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-success[href]:focus, .badge-success[href]:hover {
+    background-color: #449d44;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-info {
+    background-color: #5bc0de;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-info[href]:focus, .badge-info[href]:hover {
+    background-color: #31b0d5;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-warning {
+    background-color: #f0ad4e;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-warning[href]:focus, .badge-warning[href]:hover {
+    background-color: #ec971f;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-danger {
+    background-color: #d9534f;
+  }
+  
+  .badge,.panel-default>.panel-heading .badge.badge-danger[href]:focus, .badge-danger[href]:hover {
+    background-color: #c9302c;
+  }
+  

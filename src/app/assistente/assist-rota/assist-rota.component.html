@@ -55,7 +55,7 @@
 <button (click)="passoAnterior()">&lt; Passo anterior</button>
 <button (click)="proximoPasso()">Gerar JSON</button>
 <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Donload JSON</a>
-
+<br>
 <code>
-  <p *ngFor="let comando of comandos">{{comando}}</p>
+  <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
 </code>

@@ -2,14 +2,13 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EstruturaAplicacaoService } from './estrutura-aplicacao.service';
 import { GeracaoScriptService } from './geracao-script.service';
-import { ListaComponent } from './lista/lista.component';
+import { ListaModule } from './lista/lista.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    ListaModule
   ],
-  declarations: [ListaComponent],
-  exports: [ListaComponent]
+  exports: [ListaModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

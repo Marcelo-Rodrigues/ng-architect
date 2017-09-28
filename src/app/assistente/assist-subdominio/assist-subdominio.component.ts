@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { EstruturaAplicacaoService } from '../../shared/estrutura-aplicacao.service';
 import { DominioLogico } from '../../shared/dominio-logico';
 import { Funcionalidade } from '../../shared/funcionalidade';
+
+import $ from 'jquery';
 
 @Component({
   selector: 'my-assist-subdominio',
   templateUrl: './assist-subdominio.component.html',
   styleUrls: ['./assist-subdominio.component.css']
 })
-export class AssistSubdominioComponent implements OnInit {
+export class AssistSubdominioComponent implements AfterViewInit {
 
   dominio: DominioLogico;
   model: Funcionalidade;
+  @ViewChild('carouselDominios') carouselDominios: ElementRef;
 
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
     if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
@@ -23,7 +26,7 @@ export class AssistSubdominioComponent implements OnInit {
     this.novaFuncionalidade();
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
   }
 
   novaFuncionalidade() {

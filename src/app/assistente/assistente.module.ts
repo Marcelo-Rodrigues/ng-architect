@@ -8,6 +8,7 @@ import { AssistenteRoutingModule } from './assistente-routing.module';
 import { AssistDominioLogicoComponent } from './assist-dominio-logico/assist-dominio-logico.component';
 import { AssistSubdominioComponent } from './assist-subdominio/assist-subdominio.component';
 import { AssistRotaComponent } from './assist-rota/assist-rota.component';
+// import { AssistenteComponent } from './shared/assistente/assistente.component';
 
 @NgModule({
   imports: [
@@ -18,5 +19,6 @@ import { AssistRotaComponent } from './assist-rota/assist-rota.component';
   ],
   declarations: [AssistDominioLogicoComponent, AssistSubdominioComponent,
     AssistRotaComponent]
+   // AssistenteComponent]
 })
 export class AssistenteModule { }

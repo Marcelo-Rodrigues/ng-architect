@@ -15,6 +15,16 @@
   </ul>
 </details>
 
+<fieldset *ngIf="estruturaAplicacaoService.dominiosLogicos.length">
+    <legend>Domínios lógicos definidos</legend>
+    <ul class="list-group">
+      <my-lista *ngFor="let item of estruturaAplicacaoService.dominiosLogicos" 
+      [lista]="estruturaAplicacaoService.dominiosLogicos" [item]="item">
+        {{item.nome}} ({{item.descricao}})
+      </my-lista>
+    </ul>
+  </fieldset>
+
 <form #dominioForm="ngForm">
   <fieldset>
     <legend>Domínio lógico</legend>
@@ -25,13 +35,4 @@
     <button (click)="adicionar()">+</button><br>
   </fieldset>
 </form>
-<fieldset>
-    <legend>Domínios lógicos definidos</legend>
-    <ul>
-      <my-lista *ngFor="let item of estruturaAplicacaoService.dominiosLogicos" 
-      [lista]="estruturaAplicacaoService.dominiosLogicos" [item]="item">
-        {{item.nome}} ({{item.descricao}})
-      </my-lista>
-    </ul>
-  </fieldset>
 <button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()">Próximo passo ></button>

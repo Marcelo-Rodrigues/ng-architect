@@ -30,6 +30,7 @@ export class AssistDominioLogicoComponent implements OnInit {
 
   proximoPasso() {
     // TODO: salvar dominios logicos
+    this.estruturaAplicacaoService.salvar();
     this.router.navigate(['assistente', 'etapa2-subdominio']);
   }
 }
