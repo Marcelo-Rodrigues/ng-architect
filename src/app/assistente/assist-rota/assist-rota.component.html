@@ -52,8 +52,8 @@
   </ul>
 </fieldset>
 
-<button (click)="passoAnterior()">&lt; Passo anterior</button>
-<button (click)="proximoPasso()">Gerar JSON</button>
+<button (click)="passoAnterior()">&lt; Passo anterior</button><button (click)="estruturaAplicacaoService.salvar()" class="btn btn-success">Salvar</button>
+<button (click)="proximoPasso()">Gerar script e json</button>
 <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Donload JSON</a>
 <br>
 <code>

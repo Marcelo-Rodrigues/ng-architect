@@ -49,7 +49,7 @@
         <div class="panel-body">
             <ul class="list-group">
                 <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" 
-                [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade">
+                [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade" (change)="estruturaAplicacaoService.dominioModificado=true">
                   {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
                 </my-lista>
             </ul>
@@ -91,3 +91,4 @@
 
 <button (click)="passoAnterior()">&lt; Passo anterior</button>
 <button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()">Próximo passo ></button>
+<button (click)="estruturaAplicacaoService.salvar()" class="btn btn-success">Salvar</button>

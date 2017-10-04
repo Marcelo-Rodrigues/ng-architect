@@ -1,16 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit, OnDestroy } from '@angular/core';
 import { DominioLogico } from './dominio-logico';
 
 @Injectable()
 export class EstruturaAplicacaoService {
 
   public dominiosLogicos: DominioLogico[] = [];
+  public dominioModificado: Boolean;
+
   constructor() {
     this.carregar();
   }
 
   adicionarDominioLogico(dominioLogico: DominioLogico) {
     this.dominiosLogicos.push(dominioLogico);
+    this.dominioModificado = true;
   }
 
   possuiDominioLogico() {
@@ -19,6 +22,7 @@ export class EstruturaAplicacaoService {
 
   public salvar() {
     localStorage.setItem('dominiosLogicos', JSON.stringify(this.dominiosLogicos));
+    this.dominioModificado = false;
   }
 
   public carregar() {
@@ -26,5 +30,6 @@ export class EstruturaAplicacaoService {
     if (estruturaSalva) {
       this.dominiosLogicos = JSON.parse(estruturaSalva);
     }
+    this.dominioModificado = false;
   }
 }

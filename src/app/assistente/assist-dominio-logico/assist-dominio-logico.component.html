@@ -19,7 +19,7 @@
     <legend>Domínios lógicos definidos</legend>
     <ul class="list-group">
       <my-lista *ngFor="let item of estruturaAplicacaoService.dominiosLogicos" 
-      [lista]="estruturaAplicacaoService.dominiosLogicos" [item]="item">
+      [lista]="estruturaAplicacaoService.dominiosLogicos" [item]="item" (change)="estruturaAplicacaoService.dominioModificado=true">
         {{item.nome}} ({{item.descricao}})
       </my-lista>
     </ul>
@@ -35,4 +35,5 @@
     <button (click)="adicionar()">+</button><br>
   </fieldset>
 </form>
-<button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()">Próximo passo ></button>
+<button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()" class="btn btn-default">Próximo passo ></button>
+<button (click)="estruturaAplicacaoService.salvar()" class="btn btn-success">Salvar</button>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -32,6 +32,7 @@ export class ListaComponent implements OnInit {
 
   @Input() lista: Array<any>;
   @Input() item: any;
+  @Output() change = new EventEmitter();
   state = 'static';
 
   constructor() { }
@@ -64,6 +65,7 @@ export class ListaComponent implements OnInit {
         this.lista.splice(newIndex, 0, value);
       }
       this.state = 'static';
+      this.change.emit();
 
     }, 200);
   }

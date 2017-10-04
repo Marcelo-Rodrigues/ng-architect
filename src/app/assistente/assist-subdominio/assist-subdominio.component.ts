@@ -45,6 +45,7 @@ export class AssistSubdominioComponent implements AfterViewInit {
 
   proximoPasso() {
     // TODO: salvar dominios logicos
+    this.estruturaAplicacaoService.salvar();
     this.router.navigate(['assistente', 'etapa3-rota']);
   }
 

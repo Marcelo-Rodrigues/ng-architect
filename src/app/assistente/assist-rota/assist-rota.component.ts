@@ -33,6 +33,7 @@ export class AssistRotaComponent implements OnInit {
   proximoPasso() {
     // TODO: salvar dominios logicos
     // this.router.navigate(['assistente', '']);
+    this.estruturaAplicacaoService.salvar();
     this.comandos = this.geracaoScriptService.gerarScript();
     this.generateDownloadJsonUri();
   }
