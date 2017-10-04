@@ -31,7 +31,7 @@ export class GeracaoScriptService {
     for (let i = 0, len = funcionalidades.length; i < len; i++) {
       const funcionalidade = funcionalidades[i];
 
-      comandos.push(GeracaoScriptService.TEMPLATE_NGG_COMPONENTE(modulo, funcionalidade.nome, funcionalidade.descricao));
+      comandos.push(GeracaoScriptService.TEMPLATE_NGG_COMPONENTE(modulo.toLowerCase(), funcionalidade.nome, funcionalidade.descricao));
     }
   }
 }
