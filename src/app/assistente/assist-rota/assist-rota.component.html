@@ -57,21 +57,30 @@
 <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Download JSON</a>
 <br>
 <ng-container *ngIf="comandos.length">
-  <h3>Bash:</h3>
-  <code>
-    <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
-  </code>
+    <h3>Bash:</h3>
+    <div class="commandBash">
+        <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
+    </div>
 
   <h3>Arquivo [app-routing.module.ts]:</h3>
-    <code>
+  <div class="tsFile">
+      import {{ '{' }} NgModule } from '@angular/core';<br>
+      import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
+      <br>
       const routes: Routes = [<br>
-      <ng-container *ngFor="let rota of rotas">{{rota}}<br></ng-container>
-      ];<br>
-    </code>
+      <ng-container *ngFor="let rota of rotas">{{rota}},<br></ng-container>
+      ];<br>    
+      @NgModule({{ '{' }}<br>
+        imports: [RouterModule.forRoot(routes)],<br>
+        exports: [RouterModule]<br>
+      })<br>
+      export class AppRoutingModule {{ '{' }} }<br>
+      <br>
+  </div>
 
     <ng-container *ngFor="let rota of subRotas">
       <h3>Arquivo [{{rota.arquivo}}]:</h3>
-      <code>
+      <div class="tsFile">
           import {{ '{' }} NgModule } from '@angular/core';<br>
           import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
 
@@ -87,6 +96,6 @@
           })<br>
           export class {{rota.nome}}RoutingModule {{ '{' }} }<br>
           
-      </code>
+        </div>
     </ng-container>
 </ng-container>
