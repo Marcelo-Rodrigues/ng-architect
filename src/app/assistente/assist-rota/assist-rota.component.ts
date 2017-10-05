@@ -14,6 +14,8 @@ import { Funcionalidade } from '../../shared/funcionalidade';
 export class AssistRotaComponent implements OnInit {
   jsonUrl: any;
   comandos: string[] = [];
+  rotas: string[] = [];
+  subRotas: any[] = [];
 
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router,
      private sanitizer: DomSanitizer, private geracaoScriptService: GeracaoScriptService) {
@@ -35,6 +37,8 @@ export class AssistRotaComponent implements OnInit {
     // this.router.navigate(['assistente', '']);
     this.estruturaAplicacaoService.salvar();
     this.comandos = this.geracaoScriptService.gerarScript();
+    this.rotas = this.geracaoScriptService.gerarRotas();
+    this.subRotas = this.geracaoScriptService.gerarSubRotas();
     this.generateDownloadJsonUri();
   }
 

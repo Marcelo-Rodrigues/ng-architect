@@ -45,7 +45,7 @@
         <li *ngFor="let itemFuncionalidade of itemDominio.funcionalidades">
           {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
           <label for="rotaFuncionalidade">Rota da funcionalidade:</label> [{{itemDominio.rota}}/
-          <input type="text" id="rotaFuncionalidade" [(value)]="itemFuncionalidade.rota" name="rotaFuncionalidade">]
+          <input type="text" id="rotaFuncionalidade" [(ngModel)]="itemFuncionalidade.rota" name="rotaFuncionalidade">]
         </li>
       </ul>
     </li>
@@ -56,6 +56,37 @@
 <button (click)="proximoPasso()">Gerar script e json</button>
 <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Download JSON</a>
 <br>
-<code>
-  <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
-</code>
+<ng-container *ngIf="comandos.length">
+  <h3>Bash:</h3>
+  <code>
+    <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
+  </code>
+
+  <h3>Arquivo [app-routing.module.ts]:</h3>
+    <code>
+      const routes: Routes = [<br>
+      <ng-container *ngFor="let rota of rotas">{{rota}}<br></ng-container>
+      ];<br>
+    </code>
+
+    <ng-container *ngFor="let rota of subRotas">
+      <h3>Arquivo [{{rota.arquivo}}]:</h3>
+      <code>
+          import {{ '{' }} NgModule } from '@angular/core';<br>
+          import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
+
+          <ng-container *ngFor="let import of rota.imports">{{import}}<br></ng-container>
+          <br>
+          const routes: Routes = [<br>
+          <ng-container *ngFor="let subRota of rota.subRotas">{{subRota}},<br></ng-container>
+          ];<br>
+          <br>
+          @NgModule({{ '{' }}<br>
+            imports: [RouterModule.forChild(routes)],<br>
+            exports: [RouterModule]<br>
+          })<br>
+          export class {{rota.nome}}RoutingModule {{ '{' }} }<br>
+          
+      </code>
+    </ng-container>
+</ng-container>
