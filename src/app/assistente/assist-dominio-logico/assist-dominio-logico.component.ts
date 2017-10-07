@@ -12,7 +12,7 @@ export class AssistDominioLogicoComponent implements OnInit {
 
   model: DominioLogico;
 
-  constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
+  constructor(public estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
     this.novoDominio();
   }
 

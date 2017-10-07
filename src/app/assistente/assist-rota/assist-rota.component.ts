@@ -17,7 +17,7 @@ export class AssistRotaComponent implements OnInit {
   rotas: string[] = [];
   subRotas: any[] = [];
 
-  constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router,
+  constructor(public estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router,
      private sanitizer: DomSanitizer, private geracaoScriptService: GeracaoScriptService) {
     if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
       this.passoAnterior();

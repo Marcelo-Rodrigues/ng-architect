@@ -17,7 +17,7 @@ export class AssistSubdominioComponent implements AfterViewInit {
   model: Funcionalidade;
   @ViewChild('carouselDominios') carouselDominios: ElementRef;
 
-  constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
+  constructor(public estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
     if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
       this.passoAnterior();
     }

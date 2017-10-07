@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build -prod",
+    "postinstall": "ng build -prod -aot",
     "start": "node index.js",
     "build": "ng build",
     "test": "ng test",
@@ -24,11 +24,11 @@
     "url": "https://github.com/Marcelo-Rodrigues/ng-architect.git"
   },
   "dependencies": {
-    "@angular/cli": "1.2.1",
-    "@angular/compiler-cli": "^4.0.0",
     "@angular/animations": "^4.0.0",
+    "@angular/cli": "^1.2.6",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
