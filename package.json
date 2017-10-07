@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build -prod -aot",
+    "postinstall": "ng build",
     "start": "node index.js",
     "build": "ng build",
     "test": "ng test",
