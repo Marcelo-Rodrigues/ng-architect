@@ -50,7 +50,7 @@ export class AssistenteCriacaoComponent implements OnInit {
 export const rotasAssistente: RotaAssistente[] = [
   {
     path: '',
-    redirectTo: 'dominio_logico'
+    redirectTo: 'dominiologico'
   },
   {
     path: 'dominiologico',
