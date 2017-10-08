@@ -11,8 +11,12 @@ export class GeracaoScriptService {
     return nome.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
   }
 
-  private static TEMPLATE_NG_NEW = function (nome: string, lintFix: boolean) {
-    return `ng new ${nome} --prefix my --skip-commit${lintFix ? ' --lintFix' : ''}`;
+  private static TEMPLATE_NG_NEW = function (nome: string) {
+    return [
+      `ng new ${nome} --prefix my --skip-commit}`,
+      `cd ${nome}`,
+      `npm install`
+    ];
   };
 
   private static TEMPLATE_NGG_MODULO = function (nome: string, descricao: string) {
@@ -51,13 +55,16 @@ export class GeracaoScriptService {
     }`;
   };
 
+  private static TEMPLATE_NG_SERVE = function (port) {
+    return `ng serve --open --port ${port}`;
+  };
+
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService) { }
 
   public gerarScript(): string[] {
-    const comandos: string[] = [
-      GeracaoScriptService.TEMPLATE_NG_NEW(this.estruturaAplicacaoService.configAplicacao.nomeAplicacao,
-        true)
-    ];
+    const comandos: string[] =
+      GeracaoScriptService.TEMPLATE_NG_NEW(
+        this.estruturaAplicacaoService.configAplicacao.nomeAplicacao);
 
     for (let i = 0, len = this.estruturaAplicacaoService.dominiosLogicos.length; i < len; i++) {
       const dominioLogico = this.estruturaAplicacaoService.dominiosLogicos[i];
@@ -65,6 +72,9 @@ export class GeracaoScriptService {
       comandos.push(GeracaoScriptService.TEMPLATE_NGG_MODULO(dominioLogico.nome, dominioLogico.descricao));
       this.gerarComponentes(dominioLogico.nome, comandos, dominioLogico.funcionalidades);
     }
+
+    comandos.push(GeracaoScriptService.TEMPLATE_NG_SERVE(4201));
+
     return comandos;
   }
 
