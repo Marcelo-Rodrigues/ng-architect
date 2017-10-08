@@ -13,7 +13,7 @@ export class GeracaoScriptService {
 
   private static TEMPLATE_NG_NEW = function (nome: string) {
     return [
-      `ng new ${nome} --prefix my --skip-commit}`,
+      `ng new ${nome} --prefix my --skip-commit`,
       `cd ${nome}`,
       `npm install`
     ];
