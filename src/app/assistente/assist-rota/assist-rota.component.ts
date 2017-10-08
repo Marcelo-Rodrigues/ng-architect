@@ -19,18 +19,14 @@ export class AssistRotaComponent implements OnInit {
 
   constructor(public estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router,
      private sanitizer: DomSanitizer, private geracaoScriptService: GeracaoScriptService) {
-    if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
-      this.passoAnterior();
-    }
+    // if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
+    //   this.passoAnterior();
+    // }
   }
 
   ngOnInit() {
   }
 
-  passoAnterior() {
-    // TODO: salvar dominios logicos
-    this.router.navigate(['assistente', 'etapa2-subdominio']);
-  }
 
   proximoPasso() {
     // TODO: salvar dominios logicos
@@ -43,7 +39,7 @@ export class AssistRotaComponent implements OnInit {
   }
 
   generateDownloadJsonUri() {
-    const theJSON = JSON.stringify(this.estruturaAplicacaoService);
+    const theJSON = JSON.stringify(this.estruturaAplicacaoService.dominiosLogicos);
     const uri = this.sanitizer.bypassSecurityTrustUrl('data:text/json;charset=UTF-8,' + encodeURIComponent(theJSON));
     this.jsonUrl = uri;
   }

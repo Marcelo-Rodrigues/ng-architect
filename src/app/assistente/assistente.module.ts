@@ -8,7 +8,7 @@ import { AssistenteRoutingModule } from './assistente-routing.module';
 import { AssistDominioLogicoComponent } from './assist-dominio-logico/assist-dominio-logico.component';
 import { AssistSubdominioComponent } from './assist-subdominio/assist-subdominio.component';
 import { AssistRotaComponent } from './assist-rota/assist-rota.component';
-// import { AssistenteComponent } from './shared/assistente/assistente.component';
+import { AssistenteCriacaoComponent } from './assistente-criacao/assistente-criacao.component';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { AssistRotaComponent } from './assist-rota/assist-rota.component';
     SharedModule
   ],
   declarations: [AssistDominioLogicoComponent, AssistSubdominioComponent,
-    AssistRotaComponent]
-   // AssistenteComponent]
+    AssistRotaComponent,
+    AssistenteCriacaoComponent]
 })
 export class AssistenteModule { }

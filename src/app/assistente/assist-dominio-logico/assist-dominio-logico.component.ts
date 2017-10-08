@@ -27,10 +27,4 @@ export class AssistDominioLogicoComponent implements OnInit {
   novoDominio() {
     this.model = new DominioLogico('', '');
   }
-
-  proximoPasso() {
-    // TODO: salvar dominios logicos
-    this.estruturaAplicacaoService.salvar();
-    this.router.navigate(['assistente', 'etapa2-subdominio']);
-  }
 }

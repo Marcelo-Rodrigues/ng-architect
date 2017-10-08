@@ -1,6 +1,3 @@
-<h2>
-  Etapa 2: Definição de funcionalidades dos domínios lógicos
-</h2>
 <p>Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</p>
 <details>
   <summary>Explicação</summary>
@@ -74,10 +71,10 @@
   </ul>
 </fieldset> -->
 
-<form #funcionalidadeForm="ngForm">
+<form *ngIf="dominio" #funcionalidadeForm="ngForm">
   <fieldset>
     <legend>Funcionalidade do domínio {{ dominio.nome }}</legend>
-    <div class="input-group">      
+    <div class="input-group">
       <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon">Funcionalidade</label>
       <input class="form-control" placeholder="Ex.: CadastrarCliente" type="text" id="nomeFuncionalidade" [(ngModel)]="model.nome" name="nomeFuncionalidade">
     </div>
@@ -88,7 +85,3 @@
     <button (click)="adicionar()" class="btn btn-sucess">Adicionar</button><br>
   </fieldset>
 </form>
-
-<button (click)="passoAnterior()">&lt; Passo anterior</button>
-<button [disabled]="!estruturaAplicacaoService.dominiosLogicos.length" (click)="proximoPasso()">Próximo passo ></button>
-<button (click)="estruturaAplicacaoService.salvar()" class="btn btn-success">Salvar</button>

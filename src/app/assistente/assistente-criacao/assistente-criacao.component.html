@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a *ngFor="let etapa of etapasAssistente.listaEtapasAssistente" [ngClass]="{'list-group-item':true, 'active':etapa===etapaAssistente}"
+      [routerLink]="['..', etapa.rota.path]">
+      {{ etapa.titulo }}</a>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="panel panel-info">
+      <div class="panel-heading"> 
+        <h2 class="panel-title">
+          <a *ngIf="etapaAssistente && etapaAssistente.etapaAnterior && etapaAssistente.etapaAnterior.rota" [routerLink]="['..', etapaAssistente.etapaAnterior.rota.path]"
+          class="btn btn-default">&lt; Passo anterior</a>
+          Etapa {{ etapaAssistente.numeroEtapa }}: {{ etapaAssistente.titulo }}
+          <a *ngIf="permitirAvanco && etapaAssistente.proximaEtapa  && etapaAssistente.proximaEtapa.rota" [routerLink]="['..', etapaAssistente.proximaEtapa.rota.path]"
+            class="btn btn-default">Próximo passo ></a>
+          </h2>
+        </div>
+        <div class="container-fluid" style="margin: 20px">
+            <div class="row">
+              <router-outlet name="assistente"></router-outlet>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
