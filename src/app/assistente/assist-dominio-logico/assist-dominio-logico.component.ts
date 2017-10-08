@@ -8,23 +8,18 @@ import { DominioLogico } from '../../shared/dominio-logico';
   templateUrl: './assist-dominio-logico.component.html',
   styleUrls: ['./assist-dominio-logico.component.css']
 })
-export class AssistDominioLogicoComponent implements OnInit {
+export class AssistDominioLogicoComponent {
 
-  model: DominioLogico;
+  dominiosLogicos: DominioLogico[];
+  dominioLogicoEdicao: DominioLogico;
 
-  constructor(public estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
-    this.novoDominio();
+  constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
+    this.dominiosLogicos = estruturaAplicacaoService.dominiosLogicos;
   }
 
-  ngOnInit() {
+  adicionarDominio() {
+    this.dominioLogicoEdicao = new DominioLogico('', '');
+    this.estruturaAplicacaoService.adicionarDominioLogico(this.dominioLogicoEdicao);
   }
 
-  adicionar() {
-    this.estruturaAplicacaoService.adicionarDominioLogico(this.model);
-    this.novoDominio();
-  }
-
-  novoDominio() {
-    this.model = new DominioLogico('', '');
-  }
 }

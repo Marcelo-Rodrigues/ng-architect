@@ -8,9 +8,10 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
 import { AssistDominioLogicoComponent } from '../assist-dominio-logico/assist-dominio-logico.component';
-import { AssistSubdominioComponent } from '../assist-subdominio/assist-subdominio.component';
+import { AssistFuncionalidadesComponent } from '../assist-funcionalidades/assist-funcionalidades.component';
 import { AssistRotaComponent } from '../assist-rota/assist-rota.component';
-
+import { GeracaoScriptComponent } from '../geracao-script/geracao-script.component';
+import { AssistInfoAplicacaoComponent } from '../assist-info-aplicacao/assist-info-aplicacao.component';
 import { RotaAssistente } from '../rota-assistente';
 
 @Component({
@@ -50,7 +51,16 @@ export class AssistenteCriacaoComponent implements OnInit {
 export const rotasAssistente: RotaAssistente[] = [
   {
     path: '',
-    redirectTo: 'dominiologico'
+    redirectTo: 'infoaplicacao'
+  },
+  {
+    path: 'infoaplicacao',
+    titulo: 'Informações sobre a aplicação',
+    component: AssistenteCriacaoComponent,
+    children: [{
+      path: '', outlet: 'assistente',
+      component: AssistInfoAplicacaoComponent
+    }]
   },
   {
     path: 'dominiologico',
@@ -67,7 +77,7 @@ export const rotasAssistente: RotaAssistente[] = [
     component: AssistenteCriacaoComponent,
     children: [{
       path: '', outlet: 'assistente',
-      component: AssistSubdominioComponent
+      component: AssistFuncionalidadesComponent
     }]
   },
   {
@@ -77,6 +87,15 @@ export const rotasAssistente: RotaAssistente[] = [
     children: [{
       path: '', outlet: 'assistente',
       component: AssistRotaComponent
+    }]
+  },
+  {
+    path: 'geracaoscripts',
+    titulo: 'Geração de scripts',
+    component: AssistenteCriacaoComponent,
+    children: [{
+      path: '', outlet: 'assistente',
+      component: GeracaoScriptComponent
     }]
   }
 ];

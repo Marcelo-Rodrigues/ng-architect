@@ -1,11 +1,16 @@
 import { Injectable, OnInit, OnDestroy } from '@angular/core';
 import { DominioLogico } from './dominio-logico';
+import { ConfigAplicacao } from './config-aplicacao';
 
 @Injectable()
 export class EstruturaAplicacaoService {
 
-  public dominiosLogicos: DominioLogico[] = [];
+  public configAplicacao: ConfigAplicacao;
   public dominioModificado: Boolean;
+
+  public get dominiosLogicos() {
+    return this.configAplicacao.dominiosLogicos;
+  }
 
   constructor() {
     this.carregar();
@@ -21,15 +26,17 @@ export class EstruturaAplicacaoService {
   }
 
   public salvar() {
-    localStorage.setItem('dominiosLogicos', JSON.stringify(this.dominiosLogicos));
+    localStorage.setItem('estrutura', JSON.stringify(this.configAplicacao));
     this.dominioModificado = false;
   }
 
   public carregar() {
-    const estruturaSalva = localStorage.getItem('dominiosLogicos');
+    const estruturaSalva = localStorage.getItem('estrutura');
     if (estruturaSalva) {
-      this.dominiosLogicos = JSON.parse(estruturaSalva);
+      this.configAplicacao = JSON.parse(estruturaSalva);
+      this.dominioModificado = false;
+    } else {
+      this.configAplicacao = new ConfigAplicacao();
     }
-    this.dominioModificado = false;
   }
 }

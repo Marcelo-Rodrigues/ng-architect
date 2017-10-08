@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Route, Routes, RouterModule } from '@angular/router';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 
-const routes: Routes = [
+export interface RotaMenu extends Route {
+  descricaoMenu?: string;
+}
+
+export const routes: RotaMenu[] = [
   {
     path: '',
     component: PaginaInicialComponent
   },
   {
     path: 'assistente',
-    loadChildren: './assistente/assistente.module#AssistenteModule'
+    loadChildren: './assistente/assistente.module#AssistenteModule',
+    descricaoMenu: 'Assistente de criação'
   }
 ];
 

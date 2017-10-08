@@ -1,0 +1,91 @@
+<p>Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</p>
+<details>
+  <summary>Explicação</summary>
+  <p>Aqui serão definidas as funcionalidades para cada domínio.</p>
+  <p>Ex.: Em um sistema ERP</p>
+  <ul>
+    <li>Cliente
+      <ul>
+        <li>Listar clientes</li>
+        <li>Criar novo cliente</li>
+        <li>Alterar dados de um cliente</li>
+      </ul>
+    </li>
+    <li>Estoque
+      <ul>
+        <li>Listar estoque</li>
+        <li>Registrar compra</li>
+      </ul>
+    </li>
+    <li>Venda
+      <ul>
+        <li>Registrar venda</li>
+      </ul>
+    </li>
+    <li>Emissão de notas
+      <ul>
+        <li>Emitir nota</li>
+        <li>Consultar notas emitidas</li>
+      </ul>
+    </li>
+  </ul>
+</details>
+<div class="panel-group" id="accordion">
+  <div *ngFor="let itemDominio of dominiosLogicos" class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" (click)="dominioEdicao=itemDominio">
+          {{itemDominio.nome}} {{itemDominio.descricao ? '('+itemDominio.descricao+')':'' }}
+            <my-badge [quantidade]="itemDominio.funcionalidades.length"
+            zero="Nenhuma funcionalidade" um="1 funcionalidade" plural="funcionalidades"></my-badge>
+        </a>
+      </h4>
+    </div>
+    <div [ngClass]="{'panel-collapse collapse':true, 'in':dominioEdicao===itemDominio}">
+      <div *ngIf="dominioEdicao===itemDominio" class="panel-body">
+        <ul class="list-group" myClickOutListener (clickedOut)="funcionalidadeEdicao=null">
+          <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade"
+            (change)="estruturaAplicacaoService.dominioModificado=true" (click)="funcionalidadeEdicao = itemFuncionalidade">
+
+            <ng-container *ngIf="itemFuncionalidade!==funcionalidadeEdicao">
+              {{itemFuncionalidade.nome}} {{itemFuncionalidade.descricao ? '('+itemFuncionalidade.descricao+')':'' }}
+            </ng-container>
+            
+            <form *ngIf="itemFuncionalidade===funcionalidadeEdicao">
+              <fieldset>
+                <div class="input-group">
+                  <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon">Funcionalidade</label>
+                  <input class="form-control" placeholder="Ex.: CadastrarCliente" type="text" id="nomeFuncionalidade" [(ngModel)]="funcionalidadeEdicao.nome"
+                    [myFocus]="itemDominio===dominioEdicao" name="nomeFuncionalidade">
+                </div>
+                <div class="input-group">
+                  <label for="descricaoFuncionalidade" class="input-group-addon" id="descfunc-addon">Descrição</label>
+                  <input class="form-control" placeholder="Ex.: Cadastrar clientes" type="text" id="descricaoFuncionalidade" [(ngModel)]="funcionalidadeEdicao.descricao"
+                    name="descricaoFuncionalidade">
+                </div>
+              </fieldset>
+            </form>
+          </my-lista>
+          <br>
+          <button class="btn btn-success" (click)="adicionarFuncionalidade()">Nova funcionalidade</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <fieldset>
+  <legend>Funcionalidades dos domínios lógicos definidos</legend>
+  <ul class="list-group">
+    <li [ngClass]="{'list-group-item':true,'border border-primary':itemDominio===dominio}" *ngFor="let itemDominio of dominiosLogicos" 
+    (click)="dominio = itemDominio">
+      <span *ngIf="itemDominio===dominio">>></span>{{itemDominio.nome}} ({{itemDominio.descricao}})
+      <ul class="list-group">
+          <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" 
+          [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade">
+            {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
+          </my-lista>
+        </ul>
+    </li>
+  </ul>
+</fieldset> -->
