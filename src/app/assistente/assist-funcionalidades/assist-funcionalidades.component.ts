@@ -9,7 +9,7 @@ import { Funcionalidade } from '../../shared/funcionalidade';
   templateUrl: './assist-funcionalidades.component.html',
   styleUrls: ['./assist-funcionalidades.component.css']
 })
-export class AssistFuncionalidadesComponent implements AfterViewInit {
+export class AssistFuncionalidadesComponent {
   dominiosLogicos: DominioLogico[];
   dominioEdicao: DominioLogico;
   funcionalidadeEdicao: Funcionalidade;
@@ -17,10 +17,6 @@ export class AssistFuncionalidadesComponent implements AfterViewInit {
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService, private router: Router) {
     this.dominiosLogicos = estruturaAplicacaoService.dominiosLogicos;
     this.dominioEdicao = this.dominiosLogicos[0];
-  }
-
-  ngAfterViewInit() {
-    this.estruturaAplicacaoService.salvar();
   }
 
   adicionarFuncionalidade() {

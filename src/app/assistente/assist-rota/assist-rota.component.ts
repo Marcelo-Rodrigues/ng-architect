@@ -12,9 +12,6 @@ export class AssistRotaComponent implements OnInit {
   dominiosLogicos: DominioLogico[];
 
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService) {
-    // if (!this.estruturaAplicacaoService.possuiDominioLogico()) {
-    //   this.passoAnterior();
-    // }
     this.dominiosLogicos = estruturaAplicacaoService.dominiosLogicos;
   }
 

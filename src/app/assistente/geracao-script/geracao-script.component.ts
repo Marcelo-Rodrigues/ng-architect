@@ -33,7 +33,7 @@ export class GeracaoScriptComponent implements OnInit {
   }
 
   gerarScripts() {
-    this.estruturaAplicacaoService.salvar();
+    this.estruturaAplicacaoService.salvarEmCache();
     this.comandos = this.geracaoScriptService.gerarScript();
     this.rotas = this.geracaoScriptService.gerarRotas();
     this.subRotas = this.geracaoScriptService.gerarSubRotas();

@@ -35,7 +35,10 @@ export class AssistenteCriacaoComponent implements OnInit {
   ngOnInit() {
     this.router.events
       .filter((event) => event instanceof ActivatedRoute)
-      .subscribe(() => this.atualizarEtapa());
+      .subscribe(() => {
+        this.atualizarEtapa();
+        this.salvar();
+      });
   }
 
   atualizarEtapa() {
@@ -43,7 +46,7 @@ export class AssistenteCriacaoComponent implements OnInit {
   }
 
   salvar() {
-    this.estruturaAplicacaoService.salvar();
+    this.estruturaAplicacaoService.salvarEmCache();
   }
 }
 

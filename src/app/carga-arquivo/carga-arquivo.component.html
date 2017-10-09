@@ -1,0 +1,38 @@
+<input type="file" #fileUpload (change)="fileChange($event)" placeholder="Upload file" accept=".json">
+<br>
+<div *ngIf="substituicaoRealizada" class="alert alert-success" role="alert">Cache atualizado</div>
+
+<ng-container *ngIf="configAplicacaoArquivo">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Arquivo carregado</div>
+        <div class="panel-body">
+          <my-visualizacao [configAplicacao]="configAplicacaoArquivo"></my-visualizacao>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Em cache</div>
+        <div class="panel-body">
+          <my-visualizacao [configAplicacao]="configAplicacaoCache"></my-visualizacao>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+
+
+    <div class="alert alert-warning" role="alert">
+      <h3>
+        Substituir as informações em cache pelo arquivo selecionado?
+      </h3>
+      <br>
+      <button type="button" class="btn btn-warning" (click)="substituirCache()">Substituir</button>
+    </div>
+  </div>
+</ng-container>

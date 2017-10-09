@@ -1,0 +1,15 @@
+<ul *ngIf="configAplicacao">
+  Aplicação "{{configAplicacao.nomeAplicacao}}"
+  <li *ngFor="let itemDominio of configAplicacao.dominiosLogicos">
+    {{itemDominio.nome}} 
+    {{itemDominio.descricao ? '(' + itemDominio.descricao + ')' : ''}}
+     [Rota:{{itemDominio.rota}}]
+    <ul>
+      <li *ngFor="let itemFuncionalidade of itemDominio.funcionalidades">
+        {{itemFuncionalidade.nome}} 
+        {{itemFuncionalidade.descricao ? '(' + itemFuncionalidade.descricao + ')' : ''}}
+        [Rota: {{itemDominio.rota}}/{{itemFuncionalidade.rota}}]
+      </li>
+    </ul>
+  </li>
+</ul>
