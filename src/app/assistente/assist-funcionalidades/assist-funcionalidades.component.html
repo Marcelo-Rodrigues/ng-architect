@@ -1,31 +1,31 @@
-<p>Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</p>
+<p i18n="Pergunta do título|Questionamento para deixar claro o objetivo da tela@@assistFuncPerguntaTitulo">Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</p>
 <details>
-  <summary>Explicação</summary>
-  <p>Aqui serão definidas as funcionalidades para cada domínio.</p>
-  <p>Ex.: Em um sistema ERP</p>
+  <summary i18n="Título do menu recolhível|Título identificando o menu de explicação@@assistFuncExplicacaoTitulo">Explicação</summary>
+  <p i18n="Objetivo da etapa|Explicação do objetivo da etapa@@assistFuncExplicacaoEtapa">Aqui serão definidas as funcionalidades para cada domínio.</p>
+  <p i18n="Exemplo|Título exemplo@@assistFuncExplicacaoExemploTitulo">Ex.: Em um sistema ERP</p>
   <ul>
-    <li>Cliente
+    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio1">Cliente</ng-content>
       <ul>
-        <li>Listar clientes</li>
-        <li>Criar novo cliente</li>
-        <li>Alterar dados de um cliente</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio1Func1">Listar clientes</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio1Func2">Criar novo cliente</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio1Func3">Alterar dados de um cliente</li>
       </ul>
     </li>
-    <li>Estoque
+    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio2">Estoque</ng-content>
       <ul>
-        <li>Listar estoque</li>
-        <li>Registrar compra</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio2Func1">Listar estoque</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio2Func2">Registrar compra</li>
       </ul>
     </li>
-    <li>Venda
+    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio3">Venda</ng-content>
       <ul>
-        <li>Registrar venda</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio3Func1">Registrar venda</li>
       </ul>
     </li>
-    <li>Emissão de notas
+    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio4">Emissão de notas</ng-content>
       <ul>
-        <li>Emitir nota</li>
-        <li>Consultar notas emitidas</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio4Func1">Emitir nota</li>
+        <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio4Func2">Consultar notas emitidas</li>
       </ul>
     </li>
   </ul>
@@ -54,12 +54,14 @@
             <form *ngIf="itemFuncionalidade===funcionalidadeEdicao">
               <fieldset>
                 <div class="input-group">
-                  <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon">Funcionalidade</label>
+                  <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon" 
+                  i18n="Label do campo funcionalidade|Label exibido ao lado do campo de funcionalidade@@assistFuncCampoFuncLabel">Funcionalidade</label>
                   <input class="form-control" placeholder="Ex.: CadastrarCliente" type="text" id="nomeFuncionalidade" [(ngModel)]="funcionalidadeEdicao.nome"
                     [myFocus]="itemDominio===dominioEdicao" name="nomeFuncionalidade">
                 </div>
                 <div class="input-group">
-                  <label for="descricaoFuncionalidade" class="input-group-addon" id="descfunc-addon">Descrição</label>
+                  <label for="descricaoFuncionalidade" class="input-group-addon" id="descfunc-addon"
+                  i18n="Label do campo decrição funcionalidade|Label exibido ao lado do campo de descrição da funcionalidade@@assistFuncCampoDescricaoFuncLabel">Descrição</label>
                   <input class="form-control" placeholder="Ex.: Cadastrar clientes" type="text" id="descricaoFuncionalidade" [(ngModel)]="funcionalidadeEdicao.descricao"
                     name="descricaoFuncionalidade">
                 </div>
@@ -67,7 +69,7 @@
             </form>
           </my-lista>
           <br>
-          <button class="btn btn-success" (click)="adicionarFuncionalidade()">Nova funcionalidade</button>
+          <button class="btn btn-success" (click)="adicionarFuncionalidade()" i18n="Botão nova funcionalidade|Nome do botão de criação de funcionalidade@@assistFuncBotaoNovaFuncionalidade">Nova funcionalidade</button>
         </ul>
       </div>
     </div>

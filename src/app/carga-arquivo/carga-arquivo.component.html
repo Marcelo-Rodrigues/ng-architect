@@ -15,7 +15,7 @@
 
     <div class="col-sm-6">
       <div class="panel panel-default">
-        <div class="panel-heading">Em cache</div>
+        <div class="panel-heading" i18n="Título configuração em cache|Título que indica o conteúdo carregado em memória@@cargaArquivoEmCache">Em cache</div>
         <div class="panel-body">
           <my-visualizacao [configAplicacao]="configAplicacaoCache"></my-visualizacao>
         </div>
@@ -28,11 +28,12 @@
 
 
     <div class="alert alert-warning" role="alert">
-      <h3>
+      <h3 i18n="Confirmação de substitição|Título de confirmação para substituição do conteúdo carregado em memória pelo novo arquivo@@cargaArquivoQuestionamentoSubstituir">
         Substituir as informações em cache pelo arquivo selecionado?
       </h3>
       <br>
-      <button type="button" class="btn btn-warning" (click)="substituirCache()">Substituir</button>
+      <button type="button" class="btn btn-warning" (click)="substituirCache()"
+      i18n="Botão de confirmação de substitição|Label do botão de confirmação para substituição do conteúdo carregado em memória pelo novo arquivo@@cargaArquivoConfirmacaoSubstituir">Substituir</button>
     </div>
   </div>
 </ng-container>

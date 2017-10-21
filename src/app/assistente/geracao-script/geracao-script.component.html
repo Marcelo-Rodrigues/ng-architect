@@ -1,12 +1,13 @@
 <ng-container *ngIf="comandos.length">
-  <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Download do JSON de configuração</a>
+  <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json"
+  i18n="Link download JSON|Label do link para download do arquivo deconfiguração json@@geracaoScriptDownloadJson">Download do JSON de configuração</a>
 
   <h3>Bash:</h3>
   <div class="commandBash">
     <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
   </div>
 
-  <h3>Arquivo [app-routing.module.ts]:</h3>
+  <h3 i18n="Label arquivo|Label arquivo com o nome do arquivo gerado@@geracaoScriptLabelArquivo">Arquivo [app-routing.module.ts]:</h3>
   <div class="tsFile">
     import {{ '{' }} NgModule } from '@angular/core';<br> import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
     <br> const routes: Routes = [<br>
@@ -17,7 +18,7 @@
   </div>
 
   <ng-container *ngFor="let rota of subRotas">
-    <h3>Arquivo [{{rota.arquivo}}]:</h3>
+    <h3 i18n="Label arquivo|Label arquivo com o nome do arquivo gerado@@geracaoScriptLabelArquivo2">Arquivo [{{rota.arquivo}}]:</h3>
     <div class="tsFile">
       import {{ '{' }} NgModule } from '@angular/core';<br> import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
 

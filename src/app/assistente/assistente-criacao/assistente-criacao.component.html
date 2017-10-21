@@ -11,10 +11,12 @@
       <div class="panel-heading"> 
         <h2 class="panel-title">
           <a *ngIf="etapaAssistente && etapaAssistente.etapaAnterior && etapaAssistente.etapaAnterior.rota" [routerLink]="['..', etapaAssistente.etapaAnterior.rota.path]"
-          class="btn btn-default">&lt; Passo anterior</a>
+          class="btn btn-default" 
+          i18n="Botao anterior|Label do botao para o passo anterior do assistente@@assistCriacaoPassoAnterior">Passo anterior</a>
           Etapa {{ etapaAssistente.numeroEtapa }}: {{ etapaAssistente.titulo }}
           <a *ngIf="permitirAvanco && etapaAssistente.proximaEtapa  && etapaAssistente.proximaEtapa.rota" [routerLink]="['..', etapaAssistente.proximaEtapa.rota.path]"
-            class="btn btn-default">Próximo passo ></a>
+            class="btn btn-default"
+            i18n="Botao próximo|Label do botao para o proximo passo do assistente@@assistCriacaoProximoPasso">Próximo passo</a>
           </h2>
         </div>
         <div class="container-fluid" style="margin: 20px">
