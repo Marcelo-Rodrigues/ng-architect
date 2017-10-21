@@ -1,0 +1,33 @@
+<ng-container *ngIf="comandos.length">
+  <a *ngIf="jsonUrl" class="btn btn-clear" [href]="jsonUrl" title="Download JSON" download="NGArchitectConfig.json">Download do JSON de configuração</a>
+
+  <h3>Bash:</h3>
+  <div class="commandBash">
+    <ng-container *ngFor="let comando of comandos">{{comando}}<br></ng-container>
+  </div>
+
+  <h3>Arquivo [app-routing.module.ts]:</h3>
+  <div class="tsFile">
+    import {{ '{' }} NgModule } from '@angular/core';<br> import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
+    <br> const routes: Routes = [<br>
+    <ng-container *ngFor="let rota of rotas">{{rota}},<br></ng-container>
+    ];<br> @NgModule({{ '{' }}<br> imports: [RouterModule.forRoot(routes)],<br> exports: [RouterModule]<br> })
+    <br> export class AppRoutingModule {{ '{' }} }<br>
+    <br>
+  </div>
+
+  <ng-container *ngFor="let rota of subRotas">
+    <h3>Arquivo [{{rota.arquivo}}]:</h3>
+    <div class="tsFile">
+      import {{ '{' }} NgModule } from '@angular/core';<br> import {{ '{' }} Routes, RouterModule } from '@angular/router';<br>
+
+      <ng-container *ngFor="let import of rota.imports">{{import}}<br></ng-container>
+      <br> const routes: Routes = [<br>
+      <ng-container *ngFor="let subRota of rota.subRotas">{{subRota}},<br></ng-container>
+      ];<br>
+      <br> @NgModule({{ '{' }}<br> imports: [RouterModule.forChild(routes)],<br> exports: [RouterModule]<br> })
+      <br> export class {{rota.nome}}RoutingModule {{ '{' }} }<br>
+
+    </div>
+  </ng-container>
+</ng-container>

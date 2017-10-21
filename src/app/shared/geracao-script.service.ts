@@ -11,11 +11,28 @@ export class GeracaoScriptService {
     return nome.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
   }
 
-  private static TEMPLATE_NGG_MODULO = function (nome: string, descricao: string) { return `ng g m ${nome} --routing #${descricao}`; };
-  private static TEMPLATE_NGG_CLASSE = function (nome: string, descricao: string) { return `ng g class ${nome} #${descricao}`; };
+  private static TEMPLATE_NG_NEW = function (nome: string) {
+    return [
+      `ng new ${nome} --prefix my --skip-commit`,
+      `cd ${nome}`,
+      `npm install`
+    ];
+  };
+
+  private static TEMPLATE_NGG_MODULO = function (nome: string, descricao: string) {
+    return `ng g m ${nome} --routing ${(descricao ? '#' : '') + descricao}`;
+  };
+  private static TEMPLATE_NGG_CLASSE = function (nome: string, descricao: string) {
+    return `ng g class ${nome} ${(descricao ? '#' : '') + descricao}`;
+  };
   private static TEMPLATE_NGG_COMPONENTE =
-  function (modulo: string, nome: string, descricao: string) { return `ng g c ${modulo}/${nome} #${descricao}`; };
-  private static TEMPLATE_NGG_SERVICO = function (nome: string, descricao: string) { return `ng g s ${nome} #${descricao}`; };
+  function (modulo: string, nome: string, descricao: string) {
+    return `ng g c ${modulo}/${nome} ${(descricao ? '#' : '') + descricao}`;
+  };
+
+  private static TEMPLATE_NGG_SERVICO = function (nome: string, descricao: string) {
+    return `ng g s ${nome} ${(descricao ? '#' : '') + descricao}`;
+  };
 
   private static TEMPLATE_ROTA_LAZY = function (path: string, nome: string) {
     return `{
@@ -27,7 +44,7 @@ export class GeracaoScriptService {
   private static TEMPLATE_IMPORT = function (nome: string) {
     return `
     import { ${nome}Component } from './${GeracaoScriptService.camelCaseParaDash(nome)
-    }/${GeracaoScriptService.camelCaseParaDash(nome)}.component';
+      }/${GeracaoScriptService.camelCaseParaDash(nome)}.component';
     `;
   };
 
@@ -38,10 +55,16 @@ export class GeracaoScriptService {
     }`;
   };
 
+  private static TEMPLATE_NG_SERVE = function (port) {
+    return `ng serve --open --port ${port}`;
+  };
+
   constructor(private estruturaAplicacaoService: EstruturaAplicacaoService) { }
 
   public gerarScript(): string[] {
-    const comandos: string[] = [];
+    const comandos: string[] =
+      GeracaoScriptService.TEMPLATE_NG_NEW(
+        this.estruturaAplicacaoService.configAplicacao.nomeAplicacao);
 
     for (let i = 0, len = this.estruturaAplicacaoService.dominiosLogicos.length; i < len; i++) {
       const dominioLogico = this.estruturaAplicacaoService.dominiosLogicos[i];
@@ -49,6 +72,9 @@ export class GeracaoScriptService {
       comandos.push(GeracaoScriptService.TEMPLATE_NGG_MODULO(dominioLogico.nome, dominioLogico.descricao));
       this.gerarComponentes(dominioLogico.nome, comandos, dominioLogico.funcionalidades);
     }
+
+    comandos.push(GeracaoScriptService.TEMPLATE_NG_SERVE(4201));
+
     return comandos;
   }
 
@@ -93,7 +119,7 @@ export class GeracaoScriptService {
       rotas.push({
         nome: dominioLogico.nome,
         arquivo: `${GeracaoScriptService.camelCaseParaDash(dominioLogico.nome)}/${
-          GeracaoScriptService.camelCaseParaDash(dominioLogico.nome)}-routing.module.ts`,
+        GeracaoScriptService.camelCaseParaDash(dominioLogico.nome)}-routing.module.ts`,
         imports: imports,
         subRotas: subRotas
       });

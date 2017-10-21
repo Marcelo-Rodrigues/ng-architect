@@ -7,18 +7,18 @@ import { MenuComponent } from './menu/menu.component';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { EstruturaAplicacaoService } from './shared/estrutura-aplicacao.service';
 import { SharedModule } from './shared/shared.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CargaArquivoComponent } from './carga-arquivo/carga-arquivo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    PaginaInicialComponent
+    PaginaInicialComponent,
+    CargaArquivoComponent
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
     SharedModule.forRoot(),
     BrowserAnimationsModule
   ],

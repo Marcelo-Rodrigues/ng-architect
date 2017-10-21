@@ -2,7 +2,7 @@
 <details>
   <summary>Explicação</summary>
   <p>Aqui serão definidas as funcionalidades gerais da aplicação.</p>
-  <p>Cada domínio lógico será carregado sob demanda ao acionar uma rota.</p>
+  <p>Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</p>
   <p>Ex.: Em um sistema ERP</p>
   <ul>
     <li>Cliente (agrupando CRUD e listagem de clientes)</li>
@@ -12,23 +12,30 @@
   </ul>
 </details>
 
-<fieldset *ngIf="estruturaAplicacaoService.dominiosLogicos.length">
-  <legend>Domínios lógicos definidos</legend>
-  <ul class="list-group">
-    <my-lista *ngFor="let item of estruturaAplicacaoService.dominiosLogicos" [lista]="estruturaAplicacaoService.dominiosLogicos"
-      [item]="item" (change)="estruturaAplicacaoService.dominioModificado=true">
-      {{item.nome}} ({{item.descricao}})
+<fieldset>
+  <legend>
+      <my-badge [quantidade]="dominiosLogicos.length"
+      zero="Nenhum domínio" um="1 domínio" plural="domínios"></my-badge></legend>
+  <ul class="list-group" myClickOutListener (clickedOut)="dominioLogicoEdicao=null">
+    <my-lista *ngFor="let item of dominiosLogicos" [lista]="dominiosLogicos"
+      [item]="item" (change)="estruturaAplicacaoService.dominioModificado=true" (click)="dominioLogicoEdicao = item">
+      <ng-container *ngIf="item!==dominioLogicoEdicao">
+        {{item.nome}} {{item.descricao ? '('+item.descricao+')':'' }}
+      </ng-container>
+      <form *ngIf="item===dominioLogicoEdicao" #dominioForm="ngForm">
+        <fieldset>
+          <div class="input-group">
+            <label for="nomeDominio" class="input-group-addon" id="dominio-addon">Domínio:</label>
+            <input [myFocus]="item===dominioLogicoEdicao" type="text" required id="nomeDominio" tabindex="0" class="form-control" [(ngModel)]="dominioLogicoEdicao.nome" name="nomeDominio">
+          </div>
+          <div class="input-group">
+            <label for="descricaoDominio" class="input-group-addon" id="descdominio-addon">Descrição:</label>
+            <input type="text" id="descricaoDominio" class="form-control" [(ngModel)]="dominioLogicoEdicao.descricao" name="descricaoDominio">          
+          </div>
+        </fieldset>
+      </form>
     </my-lista>
+    <br>
+    <button class="btn btn-success" (click)="adicionarDominio()">Novo domínio</button>
   </ul>
 </fieldset>
-
-<form #dominioForm="ngForm">
-  <fieldset>
-    <legend>Domínio lógico</legend>
-    <label for="nomeDominio">Domínio:</label>
-    <input type="text" id="nomeDominio" [(ngModel)]="model.nome" name="nomeDominio">
-    <label for="descricaoDominio">Descrição:</label>
-    <input type="text" id="descricaoDominio" [(ngModel)]="model.descricao" name="descricaoDominio">
-    <button (click)="adicionar()">+</button><br>
-  </fieldset>
-</form>
