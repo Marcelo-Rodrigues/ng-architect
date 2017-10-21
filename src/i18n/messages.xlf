@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="homeTituloSugestaoAssistente" datatype="html">
+        <source>
+  Iniciando na ferramenta?
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/pagina-inicial/pagina-inicial.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Título de ajuda para sugerir uso do assistente</note>
+        <note priority="1" from="meaning">Título de ajuda</note>
+      </trans-unit>
+      <trans-unit id="homeTituloSugestaoAssistenteComecar" datatype="html">
+        <source>Começe por aqui: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/pagina-inicial/pagina-inicial.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Título de ajuda para sugerir uso do assistente</note>
+        <note priority="1" from="meaning">Título de ajuda</note>
+      </trans-unit>
+      <trans-unit id="homeLinkIniciarAssistente" datatype="html">
+        <source>Iniciar Assistente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/pagina-inicial/pagina-inicial.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Label do link para abrir o assistente</note>
+        <note priority="1" from="meaning">Label do link do assistente</note>
+      </trans-unit>
+      <trans-unit id="cargaArquivoEmCache" datatype="html">
+        <source>Em cache</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/carga-arquivo/carga-arquivo.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Título que indica o conteúdo carregado em memória</note>
+        <note priority="1" from="meaning">Título configuração em cache</note>
+      </trans-unit>
+      <trans-unit id="cargaArquivoQuestionamentoSubstituir" datatype="html">
+        <source>
+        Substituir as informações em cache pelo arquivo selecionado?
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/carga-arquivo/carga-arquivo.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Título de confirmação para substituição do conteúdo carregado em memória pelo novo arquivo</note>
+        <note priority="1" from="meaning">Confirmação de substitição</note>
+      </trans-unit>
+      <trans-unit id="cargaArquivoConfirmacaoSubstituir" datatype="html">
+        <source>Substituir</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/carga-arquivo/carga-arquivo.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">Label do botão de confirmação para substituição do conteúdo carregado em memória pelo novo arquivo</note>
+        <note priority="1" from="meaning">Botão de confirmação de substitição</note>
+      </trans-unit>
+      <trans-unit id="visualizacaoLabelAplicacao" datatype="html">
+        <source>Aplicação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/visualizacao/visualizacao.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Label do nome do programa</note>
+        <note priority="1" from="meaning">Programa</note>
+      </trans-unit>
+      <trans-unit id="visualizacaoLabelRotaDom" datatype="html">
+        <source>Rota:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/visualizacao/visualizacao.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Label da rota do domínio</note>
+        <note priority="1" from="meaning">Label Rota</note>
+      </trans-unit>
+      <trans-unit id="visualizacaoLabelRotaFunc" datatype="html">
+        <source>Rota:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/visualizacao/visualizacao.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Label da rota das funcionalidades</note>
+        <note priority="1" from="meaning">Label Rota</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogPerguntaTitulo" datatype="html">
+        <source>Quais serão os domínios lógicos da aplicação?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Questionamento para deixar claro o objetivo da tela</note>
+        <note priority="1" from="meaning">Pergunta do título</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoTitulo" datatype="html">
+        <source>Explicação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Título identificando o menu de explicação</note>
+        <note priority="1" from="meaning">Título do menu recolhível</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoEtapa" datatype="html">
+        <source>Aqui serão definidas as funcionalidades gerais da aplicação.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Explicação do objetivo da etapa</note>
+        <note priority="1" from="meaning">Objetivo da etapa</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoObservacao" datatype="html">
+        <source>Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Observação de que o domínio definido carregará uma rota sob demanda</note>
+        <note priority="1" from="meaning">Observação</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemploTitulo" datatype="html">
+        <source>Ex.: Em um sistema ERP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Título exemplo</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo1" datatype="html">
+        <source>Cliente (agrupando CRUD e listagem de clientes)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo2" datatype="html">
+        <source>Estoque (agrupando CRUD e listagem de estoque)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo3" datatype="html">
+        <source>Venda (Gerenciamento das vendas)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo4" datatype="html">
+        <source>Emissão de notas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogCampoDominioLabel" datatype="html">
+        <source>Domínio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Label exibido ao lado do campo de domínio</note>
+        <note priority="1" from="meaning">Label do campo domínio</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogCampoDescricaoDominioLabel" datatype="html">
+        <source>Descrição</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Label exibido ao lado do campo de descrição do domínio</note>
+        <note priority="1" from="meaning">Label do campo decrição domínio</note>
+      </trans-unit>
+      <trans-unit id="assistDomLogBotaoNovoDominio" datatype="html">
+        <source>Novo domínio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-dominio-logico/assist-dominio-logico.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Nome do botão de criação de domínio</note>
+        <note priority="1" from="meaning">Botão novo domínio</note>
+      </trans-unit>
+      <trans-unit id="assistFuncPerguntaTitulo" datatype="html">
+        <source>Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Questionamento para deixar claro o objetivo da tela</note>
+        <note priority="1" from="meaning">Pergunta do título</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoTitulo" datatype="html">
+        <source>Explicação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Título identificando o menu de explicação</note>
+        <note priority="1" from="meaning">Título do menu recolhível</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoEtapa" datatype="html">
+        <source>Aqui serão definidas as funcionalidades para cada domínio.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Explicação do objetivo da etapa</note>
+        <note priority="1" from="meaning">Objetivo da etapa</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploTitulo" datatype="html">
+        <source>Ex.: Em um sistema ERP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Título exemplo</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1" datatype="html">
+        <source>Cliente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1Func1" datatype="html">
+        <source>Listar clientes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1Func2" datatype="html">
+        <source>Criar novo cliente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1Func3" datatype="html">
+        <source>Alterar dados de um cliente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio2" datatype="html">
+        <source>Estoque</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio2Func1" datatype="html">
+        <source>Listar estoque</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio2Func2" datatype="html">
+        <source>Registrar compra</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio3" datatype="html">
+        <source>Venda</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio3Func1" datatype="html">
+        <source>Registrar venda</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio4" datatype="html">
+        <source>Emissão de notas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de dominio</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio4Func1" datatype="html">
+        <source>Emitir nota</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio4Func2" datatype="html">
+        <source>Consultar notas emitidas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de funcionalidade</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistFuncCampoFuncLabel" datatype="html">
+        <source>Funcionalidade</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">Label exibido ao lado do campo de funcionalidade</note>
+        <note priority="1" from="meaning">Label do campo funcionalidade</note>
+      </trans-unit>
+      <trans-unit id="assistFuncCampoDescricaoFuncLabel" datatype="html">
+        <source>Descrição</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Label exibido ao lado do campo de descrição da funcionalidade</note>
+        <note priority="1" from="meaning">Label do campo decrição funcionalidade</note>
+      </trans-unit>
+      <trans-unit id="assistFuncBotaoNovaFuncionalidade" datatype="html">
+        <source>Nova funcionalidade</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <note priority="1" from="description">Nome do botão de criação de funcionalidade</note>
+        <note priority="1" from="meaning">Botão nova funcionalidade</note>
+      </trans-unit>
+      <trans-unit id="assistRotaPerguntaTitulo" datatype="html">
+        <source>Quais serão as rotas (urls) da aplicação?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Questionamento para deixar claro o objetivo da tela</note>
+        <note priority="1" from="meaning">Pergunta do título</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoTitulo" datatype="html">
+        <source>Explicação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Título identificando o menu de explicação</note>
+        <note priority="1" from="meaning">Título do menu recolhível</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoEtapa" datatype="html">
+        <source>Aqui serão definidas as rotas (urls) para cada domínio.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Explicação do objetivo da etapa</note>
+        <note priority="1" from="meaning">Objetivo da etapa</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploTitulo" datatype="html">
+        <source>Ex.: Em um sistema ERP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Título exemplo</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1" datatype="html">
+        <source>Cliente [/clientes]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1Func1" datatype="html">
+        <source>Listar clientes [/clientes/]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1Func2" datatype="html">
+        <source>Criar novo cliente [/clientes/novo]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1Func3" datatype="html">
+        <source>Alterar dados de um cliente [/clientes/:id]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio2Func1" datatype="html">
+        <source>Listar estoque [/estoque/]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio2Func2" datatype="html">
+        <source>Registrar compra [/estoque/adicionar]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio3Func1" datatype="html">
+        <source>Registrar venda [/vendas/]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio4" datatype="html">
+        <source>Emissão de notas [/notas]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio4Func1" datatype="html">
+        <source>Emitir nota [/notas/emitir]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio4Func2" datatype="html">
+        <source>Consultar notas emitidas [/notas/]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Exemplo de rota</note>
+        <note priority="1" from="meaning">Exemplo</note>
+      </trans-unit>
+      <trans-unit id="assistRotaTituloFuncDom" datatype="html">
+        <source>Funcionalidades dos domínios lógicos definidos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Titulo funcionalidade dos dominios</note>
+        <note priority="1" from="meaning">Título</note>
+      </trans-unit>
+      <trans-unit id="assistRotaLabelRotaDom" datatype="html">
+        <source>Rota do domínio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Label do campo rota do dominio</note>
+        <note priority="1" from="meaning">Label</note>
+      </trans-unit>
+      <trans-unit id="assistRotaLabelRotaFunc" datatype="html">
+        <source>Rota da funcionalidade</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-rota/assist-rota.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Label do campo rota da funcionalidade</note>
+        <note priority="1" from="meaning">Label</note>
+      </trans-unit>
+      <trans-unit id="geracaoScriptDownloadJson" datatype="html">
+        <source>Download do JSON de configuração</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/geracao-script/geracao-script.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Label do link para download do arquivo deconfiguração json</note>
+        <note priority="1" from="meaning">Link download JSON</note>
+      </trans-unit>
+      <trans-unit id="geracaoScriptLabelArquivo" datatype="html">
+        <source>Arquivo [app-routing.module.ts]:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/geracao-script/geracao-script.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Label arquivo com o nome do arquivo gerado</note>
+        <note priority="1" from="meaning">Label arquivo</note>
+      </trans-unit>
+      <trans-unit id="geracaoScriptLabelArquivo2" datatype="html">
+        <source>Arquivo [<x id="INTERPOLATION"/>]:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/geracao-script/geracao-script.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Label arquivo com o nome do arquivo gerado</note>
+        <note priority="1" from="meaning">Label arquivo</note>
+      </trans-unit>
+      <trans-unit id="assistInfoAplicNomeAplic" datatype="html">
+        <source>Nome da aplicacação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-info-aplicacao/assist-info-aplicacao.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Label ao lado do campo nome da aplicação</note>
+        <note priority="1" from="meaning">Label do campo nome da aplicação</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoPassoAnterior" datatype="html">
+        <source>Passo anterior</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Label do botao para o passo anterior do assistente</note>
+        <note priority="1" from="meaning">Botao anterior</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoProximoPasso" datatype="html">
+        <source>Próximo passo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Label do botao para o proximo passo do assistente</note>
+        <note priority="1" from="meaning">Botao próximo</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
