@@ -1,47 +1,48 @@
-<p>Quais serão as rotas (urls) da aplicação?</p>
+<p i18n="Pergunta do título|Questionamento para deixar claro o objetivo da tela@@assistRotaPerguntaTitulo">Quais serão as rotas (urls) da aplicação?</p>
 <details>
-  <summary>Explicação</summary>
-  <p>Aqui serão definidas as rotas (urls) para cada domínio.</p>
-  <p>Ex.: Em um sistema ERP</p>
+  <summary i18n="Título do menu recolhível|Título identificando o menu de explicação@@assistRotaExplicacaoTitulo">Explicação</summary>
+  <p i18n="Objetivo da etapa|Explicação do objetivo da etapa@@assistRotaExplicacaoEtapa">Aqui serão definidas as rotas (urls) para cada domínio.</p>
+  <p i18n="Exemplo|Título exemplo@@assistRotaExplicacaoExemploTitulo">Ex.: Em um sistema ERP</p>
   <ul>
-    <li>Cliente [/clientes]
+    <li><ng-content i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio1">Cliente [/clientes]</ng-content>
       <ul>
-        <li>Listar clientes [/clientes/]</li>
-        <li>Criar novo cliente [/clientes/novo]</li>
-        <li>Alterar dados de um cliente [/clientes/:id]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio1Func1">Listar clientes [/clientes/]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio1Func2">Criar novo cliente [/clientes/novo]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio1Func3">Alterar dados de um cliente [/clientes/:id]</li>
       </ul>
     </li>
-    <li>Estoque [/estoque]
+    <li><ng-content i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio2"></ng-content>Estoque [/estoque]
       <ul>
-        <li>Listar estoque [/estoque/]</li>
-        <li>Registrar compra [/estoque/adicionar]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio2Func1">Listar estoque [/estoque/]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio2Func2">Registrar compra [/estoque/adicionar]</li>
       </ul>
     </li>
-    <li>Venda [/vendas]
+    <li><ng-content i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio3"></ng-content>Venda [/vendas]
       <ul>
-        <li>Registrar venda [/vendas/]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio3Func1">Registrar venda [/vendas/]</li>
       </ul>
     </li>
-    <li>Emissão de notas [/notas]
+    <li><ng-content i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio4">Emissão de notas [/notas]</ng-content>
       <ul>
-        <li>Emitir nota [/notas/emitir]</li>
-        <li>Consultar notas emitidas [/notas/]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio4Func1">Emitir nota [/notas/emitir]</li>
+        <li i18n="Exemplo|Exemplo de rota@@assistRotaExplicacaoExemploRotaDominio4Func2">Consultar notas emitidas [/notas/]</li>
       </ul>
     </li>
   </ul>
 </details>
 
 <fieldset>
-  <legend>Funcionalidades dos domínios lógicos definidos</legend>
+  <legend i18n="Título|Titulo funcionalidade dos dominios@@assistRotaTituloFuncDom">Funcionalidades dos domínios lógicos definidos</legend>
   <ul>
     <li *ngFor="let itemDominio of dominiosLogicos">
       {{itemDominio.nome}} ({{itemDominio.descricao}})
-      <label for="rotaDominio">Rota do domínio:</label>
+      <label for="rotaDominio" i18n="Label|Label do campo rota do dominio@@assistRotaLabelRotaDom">Rota do domínio</label>
       <input type="text" id="rotaDominio" [(ngModel)]="itemDominio.rota" name="rotaDominio">
       <ul>
         <li *ngFor="let itemFuncionalidade of itemDominio.funcionalidades">
           {{itemFuncionalidade.nome}} ({{itemFuncionalidade.descricao}})
-          <label for="rotaFuncionalidade">Rota da funcionalidade:</label> [{{itemDominio.rota}}/
+          <label for="rotaFuncionalidade" 
+          i18n="Label|Label do campo rota da funcionalidade@@assistRotaLabelRotaFunc">Rota da funcionalidade</label> [{{itemDominio.rota}}/
           <input type="text" id="rotaFuncionalidade" [(ngModel)]="itemFuncionalidade.rota" name="rotaFuncionalidade">]
         </li>
       </ul>
