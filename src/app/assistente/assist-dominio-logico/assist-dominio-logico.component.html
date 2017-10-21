@@ -1,19 +1,19 @@
-<p>Quais serão os domínios lógicos da aplicação?</p>
+<p i18n="Pergunta do título|Questionamento para deixar claro o objetivo da tela@@assistDomLogPerguntaTitulo">Quais serão os domínios lógicos da aplicação?</p>
 <details>
-  <summary>Explicação</summary>
-  <p>Aqui serão definidas as funcionalidades gerais da aplicação.</p>
-  <p>Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</p>
-  <p>Ex.: Em um sistema ERP</p>
-  <ul>
-    <li>Cliente (agrupando CRUD e listagem de clientes)</li>
-    <li>Estoque (agrupando CRUD e listagem de estoque)</li>
-    <li>Venda (Gerenciamento das vendas)</li>
-    <li>Emissão de notas</li>
-  </ul>
+  <summary i18n="Título do menu recolhível|Título identificando o menu de explicação@@assistDomLogExplicacaoTitulo">Explicação</summary>
+    <p i18n="Objetivo da etapa|Explicação do objetivo da etapa@@assistDomLogExplicacaoEtapa">Aqui serão definidas as funcionalidades gerais da aplicação.</p>
+    <p i18n="Observação|Observação de que o domínio definido carregará uma rota sob demanda@@assistDomLogExplicacaoObservacao">Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</p>
+    <p i18n="Exemplo|Título exemplo@@assistDomLogExplicacaoExemploTitulo">Ex.: Em um sistema ERP</p>
+    <ul>
+      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo1">Cliente (agrupando CRUD e listagem de clientes)</li>
+      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo2">Estoque (agrupando CRUD e listagem de estoque)</li>
+      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo3">Venda (Gerenciamento das vendas)</li>
+      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo4">Emissão de notas</li>
+    </ul>
 </details>
 
 <fieldset>
-  <legend>
+  <legend>  
       <my-badge [quantidade]="dominiosLogicos.length"
       zero="Nenhum domínio" um="1 domínio" plural="domínios"></my-badge></legend>
   <ul class="list-group" myClickOutListener (clickedOut)="dominioLogicoEdicao=null">
@@ -25,17 +25,17 @@
       <form *ngIf="item===dominioLogicoEdicao" #dominioForm="ngForm">
         <fieldset>
           <div class="input-group">
-            <label for="nomeDominio" class="input-group-addon" id="dominio-addon">Domínio:</label>
+            <label for="nomeDominio" class="input-group-addon" id="dominio-addon" i18n="Label do campo domínio|Label exibido ao lado do campo de domínio@@assistDomLogCampoDominioLabel">Domínio</label>
             <input [myFocus]="item===dominioLogicoEdicao" type="text" required id="nomeDominio" tabindex="0" class="form-control" [(ngModel)]="dominioLogicoEdicao.nome" name="nomeDominio">
           </div>
           <div class="input-group">
-            <label for="descricaoDominio" class="input-group-addon" id="descdominio-addon">Descrição:</label>
-            <input type="text" id="descricaoDominio" class="form-control" [(ngModel)]="dominioLogicoEdicao.descricao" name="descricaoDominio">          
+            <label for="descricaoDominio" class="input-group-addon" id="descdominio-addon" i18n="Label do campo decrição domínio|Label exibido ao lado do campo de descrição do domínio@@assistDomLogCampoDescricaoDominioLabel">Descrição:</label>
+            <input type="text" id="descricaoDominio" class="form-control" [(ngModel)]="dominioLogicoEdicao.descricao" name="descricaoDominio">
           </div>
         </fieldset>
       </form>
     </my-lista>
     <br>
-    <button class="btn btn-success" (click)="adicionarDominio()">Novo domínio</button>
+    <button class="btn btn-success" (click)="adicionarDominio()" i18n="Botão novo domínio|Nome do botão de criação de domínio@@assistDomLogBotaoNovoDominio">Novo domínio</button>
   </ul>
 </fieldset>
