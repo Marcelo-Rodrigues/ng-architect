@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="homeTituloSugestaoAssistente" datatype="html">
+        <source>
+  Iniciando na ferramenta?
+</source>
+        <target>First time using the tool?</target>
+      </trans-unit>
+      <trans-unit id="homeTituloSugestaoAssistenteComecar" datatype="html">
+        <source>Começe por aqui: </source>
+        <target>Get started here:</target>
+      </trans-unit>
+      <trans-unit id="homeLinkIniciarAssistente" datatype="html">
+        <source>Iniciar Assistente</source>
+        <target>Launch the wizard</target>
+      </trans-unit>
+      <trans-unit id="cargaArquivoEmCache" datatype="html">
+        <source>Em cache</source>
+        <target>Loaded</target>
+      </trans-unit>
+      <trans-unit id="cargaArquivoQuestionamentoSubstituir" datatype="html">
+        <source>
+        Substituir as informações em cache pelo arquivo selecionado?
+      </source>
+        <target>Replace cached information with the selected file?</target>
+      </trans-unit>
+      <trans-unit id="cargaArquivoConfirmacaoSubstituir" datatype="html">
+        <source>Substituir</source>
+        <target>Replace</target>
+      </trans-unit>
+      <trans-unit id="visualizacaoLabelAplicacao" datatype="html">
+        <source>Aplicação</source>
+        <target>Application</target>
+      </trans-unit>
+      <trans-unit id="visualizacaoLabelRotaDom" datatype="html">
+        <source>Rota:</source>
+        <target>Path:</target>
+      </trans-unit>
+      <trans-unit id="visualizacaoLabelRotaFunc" datatype="html">
+        <source>Rota:</source>
+        <target>Path:</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogPerguntaTitulo" datatype="html">
+        <source>Quais serão os domínios lógicos da aplicação?</source>
+        <target>What are the logical domains of the application?</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoTitulo" datatype="html">
+        <source>Explicação</source>
+        <target>Explanation</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoEtapa" datatype="html">
+        <source>Aqui serão definidas as funcionalidades gerais da aplicação.</source>
+        <target>Here you will define the general functionalities of the application.</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoObservacao" datatype="html">
+        <source>Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</source>
+        <target>Each logical domain will be loaded on demand by triggering a route (lazy load).</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemploTitulo" datatype="html">
+        <source>Ex.: Em um sistema ERP</source>
+        <target>E.g.: In an ERP system</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo1" datatype="html">
+        <source>Cliente (agrupando CRUD e listagem de clientes)</source>
+        <target>Customer (CRUD and customer listing)</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo2" datatype="html">
+        <source>Estoque (agrupando CRUD e listagem de estoque)</source>
+        <target>Stock (CRUD and stock listing)</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo3" datatype="html">
+        <source>Venda (Gerenciamento das vendas)</source>
+        <target>Sales (Sales management)</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogExplicacaoExemplo4" datatype="html">
+        <source>Emissão de notas</source>
+        <target>Issue of invoices</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogCampoDominioLabel" datatype="html">
+        <source>Domínio</source>
+        <target>Domain</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogCampoDescricaoDominioLabel" datatype="html">
+        <source>Descrição</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogBotaoNovoDominio" datatype="html">
+        <source>Novo domínio</source>
+        <target>New domain</target>
+      </trans-unit>
+      <trans-unit id="assistFuncPerguntaTitulo" datatype="html">
+        <source>Quais serão as funcionalidades dentro de cada domínio lógico da aplicação?</source>
+        <target>What are the functionalities within each logical domain of the application?</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoTitulo" datatype="html">
+        <source>Explicação</source>
+        <target>Explanation</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoEtapa" datatype="html">
+        <source>Aqui serão definidas as funcionalidades para cada domínio.</source>
+        <target>Here you will define the functionalities for each domain.</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploTitulo" datatype="html">
+        <source>Ex.: Em um sistema ERP</source>
+        <target>E.g.: In an ERP system</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1" datatype="html">
+        <source>Cliente</source>
+        <target>Customer</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1Func1" datatype="html">
+        <source>Listar clientes</source>
+        <target>List customers</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1Func2" datatype="html">
+        <source>Criar novo cliente</source>
+        <target>Create new customer</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio1Func3" datatype="html">
+        <source>Alterar dados de um cliente</source>
+        <target>Change a customer's information</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio2" datatype="html">
+        <source>Estoque</source>
+        <target>Stock</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio2Func1" datatype="html">
+        <source>Listar estoque</source>
+        <target>List Stock</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio2Func2" datatype="html">
+        <source>Registrar compra</source>
+        <target>Record purchase</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio3" datatype="html">
+        <source>Venda</source>
+        <target>Sale</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio3Func1" datatype="html">
+        <source>Registrar venda</source>
+        <target>Record sales</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio4" datatype="html">
+        <source>Emissão de notas</source>
+        <target>Issue of invoices</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio4Func1" datatype="html">
+        <source>Emitir nota</source>
+        <target>Issue invoice</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploDominio4Func2" datatype="html">
+        <source>Consultar notas emitidas</source>
+        <target>See invoices issued</target>
+      </trans-unit>
+      <trans-unit id="assistFuncCampoFuncLabel" datatype="html">
+        <source>Funcionalidade</source>
+        <target>Functionality</target>
+      </trans-unit>
+      <trans-unit id="assistFuncCampoDescricaoFuncLabel" datatype="html">
+        <source>Descrição</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="assistFuncBotaoNovaFuncionalidade" datatype="html">
+        <source>Nova funcionalidade</source>
+        <target>New functionality</target>
+      </trans-unit>
+      <trans-unit id="assistRotaPerguntaTitulo" datatype="html">
+        <source>Quais serão as rotas (urls) da aplicação?</source>
+        <target>What are the application routes?</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoTitulo" datatype="html">
+        <source>Explicação</source>
+        <target>Explanation</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoEtapa" datatype="html">
+        <source>Aqui serão definidas as rotas (urls) para cada domínio.</source>
+        <target>Here you will define the routes for each domain.</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploTitulo" datatype="html">
+        <source>Ex.: Em um sistema ERP</source>
+        <target>E.g.: In an ERP system</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1" datatype="html">
+        <source>Cliente [/clientes]</source>
+        <target>Customer [/custumers]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1Func1" datatype="html">
+        <source>Listar clientes [/clientes/]</source>
+        <target>List customers [/customers/]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1Func2" datatype="html">
+        <source>Criar novo cliente [/clientes/novo]</source>
+        <target>Create new client [/clients/new]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio1Func3" datatype="html">
+        <source>Alterar dados de um cliente [/clientes/:id]</source>
+        <target>Change data from a client [/clients/:id]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio2Func1" datatype="html">
+        <source>Listar estoque [/estoque/]</source>
+        <target>List Stock [/stock/]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio2Func2" datatype="html">
+        <source>Registrar compra [/estoque/adicionar]</source>
+        <target>Record purchase [/purchase/new]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio3Func1" datatype="html">
+        <source>Registrar venda [/vendas/]</source>
+        <target>Record sales [/sales/]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio4" datatype="html">
+        <source>Emissão de notas [/notas]</source>
+        <target>Issue of invoices [/invoices]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio4Func1" datatype="html">
+        <source>Emitir nota [/notas/emitir]</source>
+        <target>Issue invoice [/invoices/issue]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaExplicacaoExemploRotaDominio4Func2" datatype="html">
+        <source>Consultar notas emitidas [/notas/]</source>
+        <target>See invoices issued [/invoices/]</target>
+      </trans-unit>
+      <trans-unit id="assistRotaTituloFuncDom" datatype="html">
+        <source>Funcionalidades dos domínios lógicos definidos</source>
+        <target>Functionalities of defined logical domains</target>
+      </trans-unit>
+      <trans-unit id="assistRotaLabelRotaDom" datatype="html">
+        <source>Rota do domínio</source>
+        <target>Domain route</target>
+      </trans-unit>
+      <trans-unit id="assistRotaLabelRotaFunc" datatype="html">
+        <source>Rota da funcionalidade</source>
+        <target>Feature route</target>
+      </trans-unit>
+      <trans-unit id="geracaoScriptDownloadJson" datatype="html">
+        <source>Download do JSON de configuração</source>
+        <target>Download JSON config</target>
+      </trans-unit>
+      <trans-unit id="geracaoScriptLabelArquivo" datatype="html">
+        <source>Arquivo [app-routing.module.ts]:</source>
+        <target>File [app-routing.module.ts]:</target>
+      </trans-unit>
+      <trans-unit id="geracaoScriptLabelArquivo2" datatype="html">
+        <source>Arquivo [<x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="INTERPOLATION"/>]:</source>
+        <target>File </target>
+      </trans-unit>
+      <trans-unit id="assistInfoAplicNomeAplic" datatype="html">
+        <source>Nome da aplicacação</source>
+        <target>Application name</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoPassoAnterior" datatype="html">
+        <source>Passo anterior</source>
+        <target>Previous step</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoProximoPasso" datatype="html">
+        <source>Próximo passo</source>
+        <target>Next step</target>
+      </trans-unit></body>
+  </file>
+</xliff>
