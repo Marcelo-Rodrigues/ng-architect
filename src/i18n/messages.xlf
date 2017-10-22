@@ -31,6 +31,24 @@
         <note priority="1" from="description">Label do link para abrir o assistente</note>
         <note priority="1" from="meaning">Label do link do assistente</note>
       </trans-unit>
+      <trans-unit id="cargaMsgArquivoCacheAtualizado" datatype="html">
+        <source>Cache atualizado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/carga-arquivo/carga-arquivo.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Notificação de arquivo carregado</note>
+        <note priority="1" from="meaning">Notificação carga</note>
+      </trans-unit>
+      <trans-unit id="cargaArquivoArquivoCarregado" datatype="html">
+        <source>Arquivo carregado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/carga-arquivo/carga-arquivo.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Título que indica o conteúdo do arquivo carregado</note>
+        <note priority="1" from="meaning">Título configuração do arquivo</note>
+      </trans-unit>
       <trans-unit id="cargaArquivoEmCache" datatype="html">
         <source>Em cache</source>
         <context-group purpose="location">
@@ -394,20 +412,38 @@
         <note priority="1" from="description">Label exibido ao lado do campo de funcionalidade</note>
         <note priority="1" from="meaning">Label do campo funcionalidade</note>
       </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploFuncPlaceholder" datatype="html">
+        <source>Ex.: CadastrarCliente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder exemplo funcionalidade</note>
+        <note priority="1" from="meaning">Placeholder</note>
+      </trans-unit>
       <trans-unit id="assistFuncCampoDescricaoFuncLabel" datatype="html">
         <source>Descrição</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">69</context>
         </context-group>
         <note priority="1" from="description">Label exibido ao lado do campo de descrição da funcionalidade</note>
         <note priority="1" from="meaning">Label do campo decrição funcionalidade</note>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploFuncPlaceholderDesc" datatype="html">
+        <source>Ex.: Cadastrar clientes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder exemplo descrição funcionalidade</note>
+        <note priority="1" from="meaning">Placeholder</note>
       </trans-unit>
       <trans-unit id="assistFuncBotaoNovaFuncionalidade" datatype="html">
         <source>Nova funcionalidade</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/assistente/assist-funcionalidades/assist-funcionalidades.component.ts</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">78</context>
         </context-group>
         <note priority="1" from="description">Nome do botão de criação de funcionalidade</note>
         <note priority="1" from="meaning">Botão nova funcionalidade</note>
