@@ -538,7 +538,7 @@
         <note priority="1" from="meaning">Label arquivo</note>
       </trans-unit>
       <trans-unit id="geracaoScriptLabelArquivo2" datatype="html">
-        <source>Arquivo [<x id="INTERPOLATION"/>]:</source>
+        <source>Arquivo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/assistente/geracao-script/geracao-script.component.ts</context>
           <context context-type="linenumber">21</context>
