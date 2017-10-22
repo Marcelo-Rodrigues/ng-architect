@@ -87,6 +87,24 @@
         <note priority="1" from="description">Label da rota das funcionalidades</note>
         <note priority="1" from="meaning">Label Rota</note>
       </trans-unit>
+      <trans-unit id="menuItemLoadFile" datatype="html">
+        <source>Carregar arquivo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/menu/menu-item/menu-item.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Item de menu para carga do arquivo de configuração</note>
+        <note priority="1" from="meaning">Menu carga de arquivo</note>
+      </trans-unit>
+      <trans-unit id="menuItemWizard" datatype="html">
+        <source>Assistente de criação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/menu/menu-item/menu-item.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Item de menu para abertura do assistente</note>
+        <note priority="1" from="meaning">Menu assistente</note>
+      </trans-unit>
       <trans-unit id="assistDomLogPerguntaTitulo" datatype="html">
         <source>Quais serão os domínios lógicos da aplicação?</source>
         <context-group purpose="location">
@@ -572,6 +590,51 @@
         </context-group>
         <note priority="1" from="description">Label do botao para o proximo passo do assistente</note>
         <note priority="1" from="meaning">Botao próximo</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemInfoApp" datatype="html">
+        <source>Informações sobre a aplicação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao-item/assistente-criacao-item.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Informações gerais da aplicação</note>
+        <note priority="1" from="meaning">Título etapa assistente</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemLogicDomain" datatype="html">
+        <source>Definição de dominios lógicos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao-item/assistente-criacao-item.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Agrupamento lógico</note>
+        <note priority="1" from="meaning">Título etapa assistente</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemLogicDomainFeatures" datatype="html">
+        <source>Definição de funcionalidades dos domínios lógicos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao-item/assistente-criacao-item.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Funcionalidades do grupamento lógico</note>
+        <note priority="1" from="meaning">Título etapa assistente</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemRoutes" datatype="html">
+        <source>Definição de rotas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao-item/assistente-criacao-item.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Rotas da aplicação</note>
+        <note priority="1" from="meaning">Título etapa assistente</note>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItem" datatype="html">
+        <source>Geração de scripts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/assistente/assistente-criacao/assistente-criacao-item/assistente-criacao-item.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Geração de scripts</note>
+        <note priority="1" from="meaning">Título etapa assistente</note>
       </trans-unit>
     </body>
   </file>

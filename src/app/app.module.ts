@@ -9,13 +9,15 @@ import { EstruturaAplicacaoService } from './shared/estrutura-aplicacao.service'
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CargaArquivoComponent } from './carga-arquivo/carga-arquivo.component';
+import { MenuItemComponent } from './menu/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     PaginaInicialComponent,
-    CargaArquivoComponent
+    CargaArquivoComponent,
+    MenuItemComponent
   ],
   imports: [
     AppRoutingModule,

@@ -8,10 +8,10 @@ export class EtapaAssistente {
     public proximaEtapa?: EtapaAssistente = null;
     public numeroEtapa?= 0;
 
-    public titulo?: string;
+    public stepId?: string;
 
     constructor(public rota: RotaAssistente) {
-        this.titulo = rota.titulo;
+        this.stepId = rota.stepId;
      }
 }
 
