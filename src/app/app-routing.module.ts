@@ -4,7 +4,7 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 import { CargaArquivoComponent } from './carga-arquivo/carga-arquivo.component';
 
 export interface RotaMenu extends Route {
-  descricaoMenu?: string;
+  menuId?: string;
 }
 
 export const routes: RotaMenu[] = [
@@ -15,12 +15,12 @@ export const routes: RotaMenu[] = [
   {
     path: 'carregararquivo',
     component: CargaArquivoComponent,
-    descricaoMenu: 'Carregar arquivo'
+    menuId: 'loadFile' // 'Carregar arquivo'
   },
   {
     path: 'assistente',
     loadChildren: './assistente/assistente.module#AssistenteModule',
-    descricaoMenu: 'Assistente de criação'
+    menuId: 'wizard' // 'Assistente de criação'
   },
 ];
 

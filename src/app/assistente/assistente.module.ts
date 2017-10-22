@@ -12,6 +12,7 @@ import { AssistenteCriacaoComponent } from './assistente-criacao/assistente-cria
 import { BadgeComponent } from './shared/badge/badge.component';
 import { GeracaoScriptComponent } from './geracao-script/geracao-script.component';
 import { AssistInfoAplicacaoComponent } from './assist-info-aplicacao/assist-info-aplicacao.component';
+import { AssistenteCriacaoItemComponent } from './assistente-criacao/assistente-criacao-item/assistente-criacao-item.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { AssistInfoAplicacaoComponent } from './assist-info-aplicacao/assist-inf
     AssistenteCriacaoComponent,
     BadgeComponent,
     GeracaoScriptComponent,
-    AssistInfoAplicacaoComponent]
+    AssistInfoAplicacaoComponent,
+    AssistenteCriacaoItemComponent]
 })
 export class AssistenteModule { }

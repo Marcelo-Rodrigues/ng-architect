@@ -1,12 +1,12 @@
 <input type="file" #fileUpload (change)="fileChange($event)" placeholder="Upload file" accept=".json">
 <br>
-<div *ngIf="substituicaoRealizada" class="alert alert-success" role="alert">Cache atualizado</div>
+<div *ngIf="substituicaoRealizada" class="alert alert-success" role="alert" i18n="Notificação carga|Notificação de arquivo carregado@@cargaMsgArquivoCacheAtualizado">Cache atualizado</div>
 
 <ng-container *ngIf="configAplicacaoArquivo">
   <div class="row">
     <div class="col-sm-6">
       <div class="panel panel-default">
-        <div class="panel-heading">Arquivo carregado</div>
+        <div class="panel-heading" i18n="Título configuração do arquivo|Título que indica o conteúdo do arquivo carregado@@cargaArquivoArquivoCarregado">Arquivo carregado</div>
         <div class="panel-body">
           <my-visualizacao [configAplicacao]="configAplicacaoArquivo"></my-visualizacao>
         </div>

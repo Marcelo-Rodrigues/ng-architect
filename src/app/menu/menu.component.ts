@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   constructor(public router: Router) {
     this.menus = routes
-    .filter(item => item.descricaoMenu);
+    .filter(item => item.menuId);
   }
 
   ngOnInit() {

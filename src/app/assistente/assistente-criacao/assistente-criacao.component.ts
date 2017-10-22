@@ -58,7 +58,7 @@ export const rotasAssistente: RotaAssistente[] = [
   },
   {
     path: 'infoaplicacao',
-    titulo: 'Informações sobre a aplicação',
+    stepId: 'infoApp',
     component: AssistenteCriacaoComponent,
     children: [{
       path: '', outlet: 'assistente',
@@ -67,7 +67,7 @@ export const rotasAssistente: RotaAssistente[] = [
   },
   {
     path: 'dominiologico',
-    titulo: 'Definição de dominios lógicos',
+    stepId: 'logicDomain',
     component: AssistenteCriacaoComponent,
     children: [{
       path: '', outlet: 'assistente',
@@ -76,7 +76,7 @@ export const rotasAssistente: RotaAssistente[] = [
   },
   {
     path: 'funcionalidades',
-    titulo: 'Definição de funcionalidades dos domínios lógicos',
+    stepId: 'logicDomainFeatures',
     component: AssistenteCriacaoComponent,
     children: [{
       path: '', outlet: 'assistente',
@@ -85,7 +85,7 @@ export const rotasAssistente: RotaAssistente[] = [
   },
   {
     path: 'rota',
-    titulo: 'Definição de rotas',
+    stepId: 'routes',
     component: AssistenteCriacaoComponent,
     children: [{
       path: '', outlet: 'assistente',
@@ -94,7 +94,7 @@ export const rotasAssistente: RotaAssistente[] = [
   },
   {
     path: 'geracaoscripts',
-    titulo: 'Geração de scripts',
+    stepId: 'scripts',
     component: AssistenteCriacaoComponent,
     children: [{
       path: '', outlet: 'assistente',

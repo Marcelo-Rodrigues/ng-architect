@@ -1,2 +1,4 @@
 <span [ngClass]="{'badge badge-pill':true, 'badge-primary': quantidade>0,
-  'badge-danger':quantidade===0}">{{ descricaoQuantidade() }}</span>
+  'badge-danger':quantidade===0}">
+  <ng-content></ng-content>
+</span>

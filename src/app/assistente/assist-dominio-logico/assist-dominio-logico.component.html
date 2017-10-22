@@ -1,24 +1,26 @@
 <p i18n="Pergunta do título|Questionamento para deixar claro o objetivo da tela@@assistDomLogPerguntaTitulo">Quais serão os domínios lógicos da aplicação?</p>
 <details>
   <summary i18n="Título do menu recolhível|Título identificando o menu de explicação@@assistDomLogExplicacaoTitulo">Explicação</summary>
-    <p i18n="Objetivo da etapa|Explicação do objetivo da etapa@@assistDomLogExplicacaoEtapa">Aqui serão definidas as funcionalidades gerais da aplicação.</p>
-    <p i18n="Observação|Observação de que o domínio definido carregará uma rota sob demanda@@assistDomLogExplicacaoObservacao">Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</p>
-    <p i18n="Exemplo|Título exemplo@@assistDomLogExplicacaoExemploTitulo">Ex.: Em um sistema ERP</p>
-    <ul>
-      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo1">Cliente (agrupando CRUD e listagem de clientes)</li>
-      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo2">Estoque (agrupando CRUD e listagem de estoque)</li>
-      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo3">Venda (Gerenciamento das vendas)</li>
-      <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo4">Emissão de notas</li>
-    </ul>
+  <p i18n="Objetivo da etapa|Explicação do objetivo da etapa@@assistDomLogExplicacaoEtapa">Aqui serão definidas as funcionalidades gerais da aplicação.</p>
+  <p i18n="Observação|Observação de que o domínio definido carregará uma rota sob demanda@@assistDomLogExplicacaoObservacao">Cada domínio lógico será carregado sob demanda ao acionar uma rota (lazy load).</p>
+  <p i18n="Exemplo|Título exemplo@@assistDomLogExplicacaoExemploTitulo">Ex.: Em um sistema ERP</p>
+  <ul>
+    <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo1">Cliente (agrupando CRUD e listagem de clientes)</li>
+    <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo2">Estoque (agrupando CRUD e listagem de estoque)</li>
+    <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo3">Venda (Gerenciamento das vendas)</li>
+    <li i18n="Exemplo|Exemplo de dominio@@assistDomLogExplicacaoExemplo4">Emissão de notas</li>
+  </ul>
 </details>
 
 <fieldset>
-  <legend>  
-      <my-badge [quantidade]="dominiosLogicos.length"
-      zero="Nenhum domínio" um="1 domínio" plural="domínios"></my-badge></legend>
+  <legend>
+    <my-badge [quantidade]="dominiosLogicos.length">
+      <ng-container i18n="Descritivos domínios|Descritivo quantitativo dos domínios lógicos@@assistDomLogQtDom">{dominiosLogicos, plural, =0 {Nenhum domínio} =1 {1 domínio} other {{{dominiosLogicos.length}} domínios}}</ng-container>
+    </my-badge>
+  </legend>
   <ul class="list-group" myClickOutListener (clickedOut)="dominioLogicoEdicao=null">
-    <my-lista *ngFor="let item of dominiosLogicos" [lista]="dominiosLogicos"
-      [item]="item" (change)="estruturaAplicacaoService.dominioModificado=true" (click)="dominioLogicoEdicao = item">
+    <my-lista *ngFor="let item of dominiosLogicos" [lista]="dominiosLogicos" [item]="item" (change)="estruturaAplicacaoService.dominioModificado=true"
+      (click)="dominioLogicoEdicao = item">
       <ng-container *ngIf="item!==dominioLogicoEdicao">
         {{item.nome}} {{item.descricao ? '('+item.descricao+')':'' }}
       </ng-container>
@@ -26,7 +28,8 @@
         <fieldset>
           <div class="input-group">
             <label for="nomeDominio" class="input-group-addon" id="dominio-addon" i18n="Label do campo domínio|Label exibido ao lado do campo de domínio@@assistDomLogCampoDominioLabel">Domínio</label>
-            <input [myFocus]="item===dominioLogicoEdicao" type="text" required id="nomeDominio" tabindex="0" class="form-control" [(ngModel)]="dominioLogicoEdicao.nome" name="nomeDominio">
+            <input [myFocus]="item===dominioLogicoEdicao" type="text" required id="nomeDominio" tabindex="0" class="form-control" [(ngModel)]="dominioLogicoEdicao.nome"
+              name="nomeDominio">
           </div>
           <div class="input-group">
             <label for="descricaoDominio" class="input-group-addon" id="descdominio-addon" i18n="Label do campo decrição domínio|Label exibido ao lado do campo de descrição do domínio@@assistDomLogCampoDescricaoDominioLabel">Descrição</label>

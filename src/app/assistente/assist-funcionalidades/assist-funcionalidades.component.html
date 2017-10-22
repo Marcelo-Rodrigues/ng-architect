@@ -4,25 +4,29 @@
   <p i18n="Objetivo da etapa|Explicação do objetivo da etapa@@assistFuncExplicacaoEtapa">Aqui serão definidas as funcionalidades para cada domínio.</p>
   <p i18n="Exemplo|Título exemplo@@assistFuncExplicacaoExemploTitulo">Ex.: Em um sistema ERP</p>
   <ul>
-    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio1">Cliente</ng-content>
+    <li>
+      <ng-container i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio1">Cliente</ng-container>
       <ul>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio1Func1">Listar clientes</li>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio1Func2">Criar novo cliente</li>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio1Func3">Alterar dados de um cliente</li>
       </ul>
     </li>
-    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio2">Estoque</ng-content>
+    <li>
+      <ng-container i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio2">Estoque</ng-container>
       <ul>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio2Func1">Listar estoque</li>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio2Func2">Registrar compra</li>
       </ul>
     </li>
-    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio3">Venda</ng-content>
+    <li>
+      <ng-container i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio3">Venda</ng-container>
       <ul>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio3Func1">Registrar venda</li>
       </ul>
     </li>
-    <li><ng-content i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio4">Emissão de notas</ng-content>
+    <li>
+      <ng-container i18n="Exemplo|Exemplo de dominio@@assistFuncExplicacaoExemploDominio4">Emissão de notas</ng-container>
       <ul>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio4Func1">Emitir nota</li>
         <li i18n="Exemplo|Exemplo de funcionalidade@@assistFuncExplicacaoExemploDominio4Func2">Consultar notas emitidas</li>
@@ -36,8 +40,12 @@
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" (click)="dominioEdicao=itemDominio">
           {{itemDominio.nome}} {{itemDominio.descricao ? '('+itemDominio.descricao+')':'' }}
-            <my-badge [quantidade]="itemDominio.funcionalidades.length"
-            zero="Nenhuma funcionalidade" um="1 funcionalidade" plural="funcionalidades"></my-badge>
+          <my-badge [quantidade]="itemDominio.funcionalidades.length">
+            <ng-container i18n="Descritivos funcionalidade|Descritivo quantitativo das funcionalidades@@assistFuncQtFunc">
+              {itemDominio.funcionalidades, plural, =0 {Nenhuma funcionalidade} =1 {1 funcionalidade} other {{{itemDominio.funcionalidades.length}}
+              funcionalidades}}
+            </ng-container>
+          </my-badge>
         </a>
       </h4>
     </div>
@@ -47,22 +55,20 @@
           <my-lista *ngFor="let itemFuncionalidade of itemDominio.funcionalidades" [lista]="itemDominio.funcionalidades" [item]="itemFuncionalidade"
             (change)="estruturaAplicacaoService.dominioModificado=true" (click)="funcionalidadeEdicao = itemFuncionalidade">
 
-            <ng-container *ngIf="itemFuncionalidade!==funcionalidadeEdicao">
-              {{itemFuncionalidade.nome}} {{itemFuncionalidade.descricao ? '('+itemFuncionalidade.descricao+')':'' }}
-            </ng-container>
-            
+            <ng-container *ngIf="itemFuncionalidade!==funcionalidadeEdicao">{{itemFuncionalidade.nome}} {{itemFuncionalidade.descricao ? '('+itemFuncionalidade.descricao+')':'' }}</ng-container>
+
             <form *ngIf="itemFuncionalidade===funcionalidadeEdicao">
               <fieldset>
                 <div class="input-group">
-                  <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon" 
-                  i18n="Label do campo funcionalidade|Label exibido ao lado do campo de funcionalidade@@assistFuncCampoFuncLabel">Funcionalidade</label>
-                  <input class="form-control" placeholder="Ex.: CadastrarCliente" type="text" id="nomeFuncionalidade" [(ngModel)]="funcionalidadeEdicao.nome"
+                  <label for="nomeFuncionalidade" class="input-group-addon" id="func-addon" i18n="Label do campo funcionalidade|Label exibido ao lado do campo de funcionalidade@@assistFuncCampoFuncLabel">Funcionalidade</label>
+                  <input class="form-control" placeholder="Ex.: CadastrarCliente" 
+                  i18n-placeholder="Placeholder|Placeholder exemplo funcionalidade@@assistFuncExplicacaoExemploFuncPlaceholder" type="text" id="nomeFuncionalidade" [(ngModel)]="funcionalidadeEdicao.nome"
                     [myFocus]="itemDominio===dominioEdicao" name="nomeFuncionalidade">
                 </div>
                 <div class="input-group">
-                  <label for="descricaoFuncionalidade" class="input-group-addon" id="descfunc-addon"
-                  i18n="Label do campo decrição funcionalidade|Label exibido ao lado do campo de descrição da funcionalidade@@assistFuncCampoDescricaoFuncLabel">Descrição</label>
-                  <input class="form-control" placeholder="Ex.: Cadastrar clientes" type="text" id="descricaoFuncionalidade" [(ngModel)]="funcionalidadeEdicao.descricao"
+                  <label for="descricaoFuncionalidade" class="input-group-addon" id="descfunc-addon" i18n="Label do campo decrição funcionalidade|Label exibido ao lado do campo de descrição da funcionalidade@@assistFuncCampoDescricaoFuncLabel">Descrição</label>
+                  <input class="form-control" 
+                  i18n-placeholder="Placeholder|Placeholder exemplo descrição funcionalidade@@assistFuncExplicacaoExemploFuncPlaceholderDesc" placeholder="Ex.: Cadastrar clientes" type="text" id="descricaoFuncionalidade" [(ngModel)]="funcionalidadeEdicao.descricao"
                     name="descricaoFuncionalidade">
                 </div>
               </fieldset>

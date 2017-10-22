@@ -3,7 +3,7 @@
     <div class="list-group">
       <a *ngFor="let etapa of etapasAssistente.listaEtapasAssistente" [ngClass]="{'list-group-item':true, 'active':etapa===etapaAssistente}"
       [routerLink]="['..', etapa.rota.path]">
-      {{ etapa.titulo }}</a>
+      <my-assistente-criacao-item [stepId]="etapa.stepId"></my-assistente-criacao-item></a>
     </div>
   </div>
   <div class="col-sm-9">
@@ -13,8 +13,8 @@
           <a *ngIf="etapaAssistente && etapaAssistente.etapaAnterior && etapaAssistente.etapaAnterior.rota" [routerLink]="['..', etapaAssistente.etapaAnterior.rota.path]"
           class="btn btn-default" 
           i18n="Botao anterior|Label do botao para o passo anterior do assistente@@assistCriacaoPassoAnterior">Passo anterior</a>
-          Etapa {{ etapaAssistente.numeroEtapa }}: {{ etapaAssistente.titulo }}
-          <a *ngIf="permitirAvanco && etapaAssistente.proximaEtapa  && etapaAssistente.proximaEtapa.rota" [routerLink]="['..', etapaAssistente.proximaEtapa.rota.path]"
+          <ng-container i18n="Passo do assistente|Label de passo atual do assistente@@assistCriacaoLabelEtapa">Etapa</ng-container> {{ etapaAssistente.numeroEtapa }}: <my-assistente-criacao-item [stepId]="etapaAssistente.stepId"></my-assistente-criacao-item>
+          <a *ngIf="permitirAvanco && etapaAssistente.proximaEtapa && etapaAssistente.proximaEtapa.rota" [routerLink]="['..', etapaAssistente.proximaEtapa.rota.path]"
             class="btn btn-default"
             i18n="Botao próximo|Label do botao para o proximo passo do assistente@@assistCriacaoProximoPasso">Próximo passo</a>
           </h2>
