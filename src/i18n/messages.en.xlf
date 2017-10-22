@@ -16,6 +16,14 @@
         <source>Iniciar Assistente</source>
         <target>Launch the wizard</target>
       </trans-unit>
+      <trans-unit id="cargaMsgArquivoCacheAtualizado" datatype="html">
+        <source>Cache atualizado</source>
+        <target>Updated cache</target>
+      </trans-unit>
+      <trans-unit id="cargaArquivoArquivoCarregado" datatype="html">
+        <source>Arquivo carregado</source>
+        <target>Uploaded file</target>
+      </trans-unit>
       <trans-unit id="cargaArquivoEmCache" datatype="html">
         <source>Em cache</source>
         <target>Loaded</target>
@@ -41,6 +49,14 @@
       <trans-unit id="visualizacaoLabelRotaFunc" datatype="html">
         <source>Rota:</source>
         <target>Path:</target>
+      </trans-unit>
+      <trans-unit id="menuItemLoadFile" datatype="html">
+        <source>Carregar arquivo</source>
+        <target>Upload file</target>
+      </trans-unit>
+      <trans-unit id="menuItemWizard" datatype="html">
+        <source>Assistente de criação</source>
+        <target>Wizard</target>
       </trans-unit>
       <trans-unit id="assistDomLogPerguntaTitulo" datatype="html">
         <source>Quais serão os domínios lógicos da aplicação?</source>
@@ -77,6 +93,10 @@
       <trans-unit id="assistDomLogExplicacaoExemplo4" datatype="html">
         <source>Emissão de notas</source>
         <target>Issue of invoices</target>
+      </trans-unit>
+      <trans-unit id="assistDomLogQtDom" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {Nenhum domínio} =1 {1 domínio} other {<x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="INTERPOLATION"/> domínios} }</source>
+        <target>{VAR_PLURAL, plural, =0 {No domain} =1 {1 domain} other {<x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="INTERPOLATION"/> domains} }</target>
       </trans-unit>
       <trans-unit id="assistDomLogCampoDominioLabel" datatype="html">
         <source>Domínio</source>
@@ -154,13 +174,35 @@
         <source>Consultar notas emitidas</source>
         <target>See invoices issued</target>
       </trans-unit>
+      <trans-unit id="assistFuncQtFunc" datatype="html">
+        <source>
+              <x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="ICU"/>
+            </source>
+        <target>
+              <x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="ICU"/>
+            </target>
+      </trans-unit>
+      <trans-unit id="03e2ba820e3be8553781708e84ad02480fde3c9b" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {Nenhuma funcionalidade} =1 {1 funcionalidade} other {<x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="INTERPOLATION"/>
+              funcionalidades} }</source>
+        <target>{VAR_PLURAL, plural, =0 {No features} =1 {1 feature} other {<x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="INTERPOLATION"/>
+              features} }</target>
+      </trans-unit>
       <trans-unit id="assistFuncCampoFuncLabel" datatype="html">
         <source>Funcionalidade</source>
         <target>Functionality</target>
       </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploFuncPlaceholder" datatype="html">
+        <source>Ex.: CadastrarCliente</source>
+        <target>E.g.: AddCustomer</target>
+      </trans-unit>
       <trans-unit id="assistFuncCampoDescricaoFuncLabel" datatype="html">
         <source>Descrição</source>
         <target>Description</target>
+      </trans-unit>
+      <trans-unit id="assistFuncExplicacaoExemploFuncPlaceholderDesc" datatype="html">
+        <source>Ex.: Cadastrar clientes</source>
+        <target>E.g.: Add customers</target>
       </trans-unit>
       <trans-unit id="assistFuncBotaoNovaFuncionalidade" datatype="html">
         <source>Nova funcionalidade</source>
@@ -243,7 +285,7 @@
         <target>File [app-routing.module.ts]:</target>
       </trans-unit>
       <trans-unit id="geracaoScriptLabelArquivo2" datatype="html">
-        <source>Arquivo [<x xmlns="urn:oasis:names:tc:xliff:document:1.2" id="INTERPOLATION"/>]:</source>
+        <source>Arquivo</source>
         <target>File </target>
       </trans-unit>
       <trans-unit id="assistInfoAplicNomeAplic" datatype="html">
@@ -254,9 +296,33 @@
         <source>Passo anterior</source>
         <target>Previous step</target>
       </trans-unit>
+      <trans-unit id="assistCriacaoLabelEtapa" datatype="html">
+        <source>Etapa</source>
+        <target>Step</target>
+      </trans-unit>
       <trans-unit id="assistCriacaoProximoPasso" datatype="html">
         <source>Próximo passo</source>
         <target>Next step</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemInfoApp" datatype="html">
+        <source>Informações sobre a aplicação</source>
+        <target>Application information</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemLogicDomain" datatype="html">
+        <source>Definição de dominios lógicos</source>
+        <target>Logical domains definition</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemLogicDomainFeatures" datatype="html">
+        <source>Definição de funcionalidades dos domínios lógicos</source>
+        <target>Definition of functionalities of logical domains</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItemRoutes" datatype="html">
+        <source>Definição de rotas</source>
+        <target>Definition of routes</target>
+      </trans-unit>
+      <trans-unit id="assistCriacaoItem" datatype="html">
+        <source>Geração de scripts</source>
+        <target>Scripts generation</target>
       </trans-unit></body>
   </file>
 </xliff>
